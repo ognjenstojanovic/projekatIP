@@ -25,9 +25,19 @@
 	height: 700px;
 }
 
-/* #bottomTable#td{
-	width: 33%;		
-} */
+#registerDiv{
+	margin-top: 200px;
+	width: 400px;
+	border: solid;
+	color: white;
+	margin: 100 auto;
+	text-align: center;
+}
+
+#registerForm{
+	display: inline-block;
+	text-align: left;
+}
 
 .bottomTableTd{
 	border: dotted;
@@ -54,7 +64,7 @@
 
 body {
 	/* background: #212121; */
-	background-image:url("images/background.jpg");
+	background-image:url(../images/background.jpg);
 	background-size: cover;
 	font-size:22px;
 	line-height: 32px;
