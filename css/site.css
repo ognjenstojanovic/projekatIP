@@ -34,6 +34,40 @@
 	text-align: center;
 }
 
+#date{
+	text-align: right;
+}
+
+#newsTitle{
+	margin-top: 0px;
+}
+
+#newsDiv{
+	margin-top: 200px;
+	width: 700px;
+	color: white;
+	margin: 100 auto;
+	text-align: center;
+}
+
+.likes{
+	text-align: right;
+	color: #045ae5;
+}
+
+.comment{
+	border: solid;
+	margin: 10px;
+	padding-left: 10px;
+	text-align: left;
+}
+
+.commenter{
+	text-align: left;
+	color: black;
+	margin: 0px;
+}
+
 #registerForm{
 	display: inline-block;
 	text-align: left;
