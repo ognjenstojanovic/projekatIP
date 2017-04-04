@@ -54,36 +54,56 @@
             <li><a href="UlogujSe.html">Uloguj se</a></li>
 			<li><a href="Kontakt.html">Kontakt</a></li>			
         </ul>
-    </nav>
+    </nav>	
 
-    <div id="registerDiv">
+    <div id="registerFormDiv">
 
-	    <p>
-	    	Unesite koriničko ime i lozinku
+	    <h1 style="margin-top: 50px">Registruj se</h1>
 
-	    	<br />
+	    <form>
+	    	<p class="registerFormP">
+				<label>
+					Korisničko ime
+					<input type="text" id="username" class="registerFormInput">
+				</label>
+			</p>
 
-	    </p>
+			<p class="registerFormP">
+				<label>
+					Lozinka
+					<input type="text" id="password" class="registerFormInput">
+				</label>
+			</p>
 
-	    <form id="registerForm">
-		    <input type="text" name="usernameInput" placeholder="Username">
-		    <br />
-		    <br />
-		    <input type="text" name="password" placeholder="Password">
-	    </form>
+			<p class="registerFormP">
+				<label>
+					Adresa
+					<input type="text" id="address" class="registerFormInput">
+				</label>
+			</p>
 
+			<p class="registerFormP">
+				<label>
+					Mobilni telefon
+					<input type="text" id="mobilni" class="registerFormInput">
+				</label>
+			</p>
+
+			<p class="registerFormP">
+				<label>
+					Lozinka
+					<input type="text" id="email" class="registerFormInput">
+				</label>
+			</p>
+		</form>
+
+		<div style="margin-top: 30px">
+			<a href="Naslovna.html"><button style="float: left; height: 25px; width: 100px;">Prihvati</button></a>
+			<a href="UlogujSe.html"><button style="float: right; height: 25px; width: 100px;">Otkazi</button></a>
+		</div>
 
 	</div>
-
-	<div>
-		<p>
-			Ukoliko nemate profil možete se registrovati <a href="RegistrujSe.html">ovde</a>.
-		</p>
-	</div>	
 	
-	
-
-	 
 	
 </div>
 
