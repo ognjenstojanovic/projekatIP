@@ -7,7 +7,7 @@
 #wrapper{
 	position: relative;
 	margin: 0 auto;
-	width: 921px;
+	width: 1015px;
 	background-color: #38494f;	
 	min-height: 100%;
 	overflow: hidden;
@@ -196,7 +196,7 @@ nav ul ul {
 	
 /* Display Dropdowns on Hover */
 nav ul li:hover > ul {
-	display:inherit;
+	display:list-item;
 }
 	
 /* Fisrt Tier Dropdown */
