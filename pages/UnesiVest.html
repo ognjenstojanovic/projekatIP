@@ -48,58 +48,69 @@
 				<ul>
 					<li><a href="#">Film</a></li>
 					<li><a href="#">Slikarstvo</a></li>
-					<li><a href="#">Košarka</a></li>
+					<li><a href="#">Muzika</a></li>
 					<li><a href="#">Pozorište</a></li>
 				</ul>        
             </li>
-            <li><a href="UlogujSe.html">Uloguj se</a></li>
+            <li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
+            <li>
+            	<a href="#">Ažuriranje</a>            
+				<ul>
+					<li><a href="UlogujSe.html">Uloguj se</a></li>
+					<li><a href="UnesiVest.html">Unesi vest</a></li>
+					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
+				</ul>
+            </li>
 			<li><a href="Kontakt.html">Kontakt</a></li>			
         </ul>
     </nav>	
 
-    <div id="registerFormDiv">
+    <div id="addNewsDiv">
 
-	    <h1 style="margin-top: 50px">Registruj se</h1>
+	    <h1 style="margin-top: 50px">Unesi vest</h1>
 
 	    <form>
 	    	<p class="registerFormP">
 				<label>
-					Korisničko ime
-					<input type="text" id="username" class="registerFormInput">
+					Kategorija
+					<select class="categorySelect">
+						<option value="Ekonomija">Ekonomija</option>
+  						<option value="Politika">Politika</option>
+  						<option value="Sport">Sport</option>
+  						<option value="Kultura">Kultura</option>
+					</select>
 				</label>
 			</p>
 
 			<p class="registerFormP">
 				<label>
-					Lozinka
-					<input type="text" id="password" class="registerFormInput">
-				</label>
-			</p>
-
-			<p class="registerFormP">
-				<label>
-					Adresa
-					<input type="text" id="address" class="registerFormInput">
-				</label>
-			</p>
-
-			<p class="registerFormP">
-				<label>
-					Mobilni telefon
-					<input type="text" id="mobilni" class="registerFormInput">
-				</label>
-			</p>
-
-			<p class="registerFormP">
-				<label>
-					Lozinka
-					<input type="text" id="email" class="registerFormInput">
+					Podkategorija
+					<select class="categorySelect">
+						<option value="Privreda">Privreda</option>
+  						<option value="Finansije">Finansije</option>
+  						<option value="Biznis">Biznis</option>
+  						<option value="Domaća">Domaća</option>
+  						<option value="Regionalna">Regionalna</option>
+  						<option value="Svet">Svet</option>
+  						<option value="Fudbal">Fudbal</option>
+  						<option value="Košarka">Košarka</option>
+  						<option value="Atletika">Atletika</option>
+  						<option value="Film">Film</option>
+  						<option value="Pozorište">Pozorište</option>
+  						<option value="Slikarstvo">Slikarstvo</option>
+  						<option value="Muzika">Muzika</option>
+					</select>
 				</label>
 			</p>
 		</form>
 
+		<div class="comments">
+	    	<p style="text-align: left;">Tekst vesti</p>
+	    	<textarea style="width: 100%; height: 200px"></textarea>
+	    </div>
+
 		<div style="margin-top: 30px">
-			<a href="Naslovna.html"><button style="float: left; height: 25px; width: 100px;">Prihvati</button></a>
+			<a href="Naslovna.html"><button style="float: left; height: 25px; width: 100px;">Unesi</button></a>
 			<a href="UlogujSe.html"><button style="float: right; height: 25px; width: 100px;">Otkazi</button></a>
 		</div>
 

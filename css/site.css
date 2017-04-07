@@ -34,6 +34,30 @@
 	text-align: center;
 }
 
+.frontPageSelect{
+	margin-left: 115px;
+}
+
+#sortingDiv{
+	margin-top: 50px;
+	margin-left: 225px;
+	margin-bottom: 100px;
+}
+
+#addNewsDiv{
+	margin-top: 200px;
+	width: 600px;
+	color: white;
+	margin: 100 auto;
+	text-align: center;
+}
+
+.categorySelect{
+	vertical-align: middle;
+	height: 25px;
+	margin-left: 10px;
+}
+
 .registerFormP{
 	text-align: left;
 }
@@ -130,6 +154,10 @@ h1 {
 	text-align: center;
 	color: #1aedc2;
 }	
+
+h4{
+	color: #1aedc2;
+}
 
 h3 {
 	font-size: 30px;
