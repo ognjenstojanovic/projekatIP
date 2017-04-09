@@ -34,6 +34,22 @@
 	text-align: center;
 }
 
+.newsListTitle{
+	text-align: center;
+}
+
+.newsListDiv{
+	display: inline-block;
+}
+
+.newsListP{
+	text-align: left;
+}
+
+#categoryList{
+	list-style: none;
+}
+
 .frontPageSelect{
 	margin-left: 115px;
 }
