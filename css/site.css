@@ -61,9 +61,8 @@
 }
 
 #addNewsDiv{
-	margin-top: 200px;
 	width: 600px;
-	color: white;
+	color: #1aedc2;
 	margin: 100 auto;
 	text-align: center;
 }
@@ -85,7 +84,7 @@
 
 #registerFormDiv{
 	width: 350;
-	color: white;
+	color: #1aedc2;
 	margin: 50 auto;
 	text-align: center;
 }
