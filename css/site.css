@@ -221,11 +221,15 @@ nav ul {
 	list-style: none;
 	position: relative;
 	text-align: center;
+
+	display: table;
+	width: 100%;
 	}
 	
 nav ul li {
 	display:inline-block;
 	background-color: #86cee8;
+	display: table-cell;
 	}
 
 nav a {
@@ -235,6 +239,8 @@ nav a {
 	font-size:20px;
 	line-height: 60px;
 	text-decoration:none;
+	text-align: center;
+	display: block;
 }
 
 nav a:hover { 
