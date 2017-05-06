@@ -4,7 +4,9 @@
 
 <div id="wrapper">
 	
-    <nav>
+    <?php 
+		include '../php/Meni.php';
+	?>
         <ul>
             <li>
 				<a href="../Naslovna.html">Naslovna</a>
@@ -71,11 +73,16 @@
 
 	    </p>
 
-	    <form id="registerForm">
-		    <input type="text" name="usernameInput" placeholder="Username">
+	    <form id="registerForm" method="post" action="../php/UlogujSe.php">
+		    <input type="text" name="email" placeholder="Email">
 		    <br />
 		    <br />
 		    <input type="text" name="password" placeholder="Password">
+			
+			<div style="margin-top: 30px">
+				<input type="submit" name="ulogujSe" value="Uloguj se" style="height: 25px; width: 100px; margin-left: 35px;">
+			</div>
+		
 	    </form>
 
 

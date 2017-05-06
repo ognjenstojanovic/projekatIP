@@ -1,12 +1,8 @@
-<html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
-<link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></head><body>
+<?php
 
-<div id="wrapper">
-	
-    <?php 
-		include '../php/Meni.php';
-	?>
+echo <<< EOT
+	<nav>
         <ul>
             <li>
 				<a href="../Naslovna.html">Naslovna</a>
@@ -22,7 +18,7 @@
 			<li>
 				<a href="news/politika/KategorijaPolitika.html">Politika</a>            
 				<ul>
-					<li><a href="news/domaca/KategorijaDomaca.html">Domaća</a></li>
+					<li><a href="news/domaca/KategorijaDomaca.html">Domaca</a></li>
 					<li><a href="news/regionalna/KategorijaRegionalna.html">Regionalna</a></li>
 					<li><a href="news/svet/KategorijaSvet.html">Svet</a></li>
 				</ul>        
@@ -39,7 +35,7 @@
 				<a href="news/sport/KategorijaSport.html">Sport</a>            
 				<ul>
 					<li><a href="news/fudbal/KategorijaFudbal.html">Fudbal</a></li>
-					<li><a href="news/kosarka/KategorijaKosarka.html">Košarka</a></li>
+					<li><a href="news/kosarka/KategorijaKosarka.html">Ko�arka</a></li>
 					<li><a href="news/tenis/KategorijaTenis.html">Tenis</a></li>
 					<li><a href="news/atletika/KategorijaAtletika.html">Atletika</a></li>
 				</ul>        
@@ -49,57 +45,29 @@
 				<ul>
 					<li><a href="news/film/KategorijaFilm.html">Film</a></li>
 					<li><a href="news/slikarstvo/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
-					<li><a href="news/pozoriste/KategorijaPozoriste.html">Pozorište</a></li>
+					<li><a href="news/pozoriste/KategorijaPozoriste.html">Pozori�te</a></li>
 				</ul>        
             </li>
             <li>
-            	<a href="#">Ažuriranje</a>            
+            	<a href="#">A�uriranje</a>            
 				<ul>
-					<li><a href="UlogujSe.html">Uloguj se</a></li>
+					<?php
+					session_start();
+					if($_SESSION['user'] != NULL){ 
+						echo '<li><a href='UlogujSe.html'>Uloguj se</a></li>';
+					}else{						
+						echo "<li><a href="IzlogujSe.php">Izloguj se</a></li><li><a href="#">Aktivnosti</a></li>";
+					}
+					?>
 					<li><a href="UnesiVest.html">Unesi vest</a></li>
 					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
             </li>
 			<li><a href="Kontakt.html">Kontakt</a></li>			
         </ul>
-    </nav>	
-
-    <h1 style="text-align: center; margin: 50 auto">Kontakt</h1>
+    </nav>
+EOT;
 	
-	<div id="contactDiv">
+ 
+?>
 	
-		<div style="color:#1aedc2; margin-top: 75px; margin-bottom: 50px;">
-
-			<p>Adresa: Bulevar kralja Aleksandra 73, 11120 Beograd, Srbija</p>
-
-			<p>Kontakt telefon: (011) 3226-760</p>
-	 
-		</div>
-		
-		<hr />
-		
-		<div id="sendMessageDiv">
-				<p class="registerFormP">
-					<label>
-						E-mail
-						<input type="text" id="email" class="registerFormInput">
-					</label>
-				</p>
-
-				<p class="registerFormP">					
-					Tekst poruke															
-				</p>
-				
-				<textarea name="poruka" rows="10" placeholder="Tekst Vaše poruke" style="width: 100%"></textarea>							
-
-				<button style="margin-top: 20px; margin-left: 250px;">Pošalji poruku</button>
-		</div>
-	</div>
-		
-
-
-	 
-	
-</div>
-
-</body></html>

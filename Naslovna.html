@@ -2,6 +2,82 @@
 
 <link rel="shortcut icon" href="pages/favicon.ico" type="image/x-icon"></head><body>
 
+<?php 
+
+if (isset($_POST["unesiVest"])){
+	
+	$servername = "localhost";
+	$username = "G23";
+	$password = "123";
+	$defaultDatabase = "portalvesti";
+	
+	// Create connection
+	$conn = new mysqli($servername, $username, $password, $defaultDatabase);
+	// Check connection
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);		
+	}
+	
+	$NaslovVesti = $_POST["naslovVesti"];
+	$kategorija = $_POST["kategorija"];
+	$podkategorija = $_POST["podkategorija"];
+	$tekstVesti = $_POST["tekstVesti"];
+	$slika = $_POST["slika"];
+	
+	$id = $conn->insert_id + 1;
+	
+	$filename = $id . ".html";
+	$link = "pages/" . $filename;
+	
+	$newFile = fopen($link, "w");
+	
+	$contents = file_get_contents('pages/VestTemplate.html');
+	
+	$contents = str_replace("{title}",$NaslovVesti,$contents);
+	$contents = str_replace("{datum}", date("d.m.y"), $contents);
+	$contents = str_replace("{tekstVesti}",$tekstVesti,$contents);
+	$contents = str_replace("{link}","../images/domaca/antic.jpg",$contents);
+	
+	fwrite($newFile, $contents);
+	
+	fclose($newFile);
+	
+	$sqlQuery = "INSERT INTO vesti (Naslov, 
+									Kategorija, 
+									Podkategorija,
+									BrojLajkova,
+									BrojHejtova,
+									Link,
+									IDKorisnika)
+							 Values('$NaslovVesti',
+									'$kategorija',
+									'$podkategorija',
+									0,
+									0,
+									'$link',
+									0)";
+
+	//$conn->query($sqlQuery);
+	
+	if ($conn->query($sqlQuery) === TRUE) {		
+	} else {
+		echo "<h1>Error inserting news: " . $conn->error . "</h1>";
+	}
+	
+	if ($conn->connect_error) {
+		die("Connection failed: " . $conn->connect_error);		
+	}
+	
+	$conn->close();
+									
+}
+else{
+	
+}
+
+?>
+
+
 <div id="wrapper">
 	<table id="topTable">
 		<tr>
