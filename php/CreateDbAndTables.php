@@ -72,7 +72,9 @@ $createTablesql = "CREATE TABLE Komentari (
 								IDKorisnika int NOT NULL,
 								IDVesti int NOT NULL,
 								BrojLajkova int,
-								BrojHejtova int)";
+								BrojHejtova int,
+								PRIMARY KEY (IDKomentara)
+								)";
 
 if ($connTable->query($createTablesql) === TRUE) {
     echo " <br> Table created successfully <br> ";
