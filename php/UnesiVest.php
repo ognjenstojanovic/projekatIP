@@ -58,12 +58,18 @@ echo "Entered the shit\n ";
 	}
 	  $sql="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
                 VALUES (Cardinal, Tom B. Erichsen, Skage, Stavanger,4006,Norway)";
+
+
 	if(!$result = $conn->query($sql)){
 		echo $conn->error;
 		die($conn->connect_error);
   }
   //id iz sesije
   //naslov...fak odakle to?
+
+
+  $insertQuery="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
+                VALUES (Cardinal, Tom B. Erichsen, Skage, Stavanger,4006,Norway)";
 
 
 }
