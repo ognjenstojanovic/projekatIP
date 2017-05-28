@@ -1,12 +1,11 @@
 <?php 
 
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
-$name = $email = $gender = $tekstVesti = $naslovVesti = "";
+$linktoFIle=$name = $podkategorija = $kategorija = $tekstVesti = $naslovVesti = "";
 
 echo "Skripta pocela\n";
 
-if (isset($_POST["uploadSlike"])){
-echo "Entered the shit\n ";
+  //TODO:dohvati sesiju,id korsnika
 
   if (empty($_POST["uploadSlike"])) {
     $nameErr = "GRESKA KOD FAJLA \n";
@@ -14,12 +13,40 @@ echo "Entered the shit\n ";
     echo $nameErr;
 
   } else {
-    //$name = test_input($_POST["name"]);
-    // check if name only contains letters and whitespace
+    $nameErr = test_input($_POST["uploadSlike"]);
+    $newfile = 'projekatIP/images/';
+
+    if (!copy($file, $newfile)) {
+     echo "failed to copy";
+    }
+     echo $nameErr;
+     $linktoFIle=$newfile+ $nameErr;
+     //realno ovde bi trebaso da ide id vesti..jer ne postoje 2 slike..samo ime slike nije 
+     //relevantno za celu stvar...zar ne?
+    //
  
   }
   
+  if (empty($_POST["kategorija"])) {
+    $kategorija = "";
+    echo "Greske kod kategorija \n";
+  
+  } else {
+    $kategorija = test_input($_POST["kategorija"]);
+    
+    echo $kategorija;
+    echo "\n";
+  }  
+  if (empty($_POST["podkategorija"])) {
+    $podkategorija = "";
+    echo "Greske kod podkategorija \n";
 
+  } else {
+    $podkategorija = test_input($_POST["podkategorija"]);
+    
+    echo $podkategorija;
+    echo "\n";
+  }
   
   if (empty($_POST["tekstVesti"])) {
     $tekstVesti = "";
@@ -56,23 +83,27 @@ echo "Entered the shit\n ";
 	echo "123";
 		die("Connection failed: " . $conn->connect_error);		
 	}
+
 	  $sql="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
                 VALUES (Cardinal, Tom B. Erichsen, Skage, Stavanger,4006,Norway)";
 
 
 	if(!$result = $conn->query($sql)){
+
 		echo $conn->error;
 		die($conn->connect_error);
-  }
+  }*/
   //id iz sesije
   //naslov...fak odakle to?
 
 
+
   $insertQuery="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
-                VALUES (Cardinal, Tom B. Erichsen, Skage, Stavanger,4006,Norway)";
+                VALUES (0, $naslovVesti,$linktoFIle, 0,0,$kategorija,$podkategorija)";
 
 
 }
+
 
 function test_input($data) {
   $data = trim($data);
