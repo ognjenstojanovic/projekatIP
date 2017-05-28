@@ -7,68 +7,12 @@
     <?php 
 		include '../php/Meni.php';
 	?>
-        <ul>
-            <li>
-				<a href="../Naslovna.html">Naslovna</a>
-			</li>
-            <li>
-				<a href="news/economy/KategorijaEkonomija.html">Ekonomija</a>
-				<ul>
-					<li><a href="news/privreda/KategorijaPrivreda.html">Privreda</a></li>
-					<li><a href="news/finansije/KategorijaFinansije.html">Finansije</a></li>
-					<li><a href="news/biznis/KategorijaBiznis.html">Biznis</a></li>
-				</ul>
-			</li>
-			<li>
-				<a href="news/politika/KategorijaPolitika.html">Politika</a>            
-				<ul>
-					<li><a href="news/domaca/KategorijaDomaca.html">Domaća</a></li>
-					<li><a href="news/regionalna/KategorijaRegionalna.html">Regionalna</a></li>
-					<li><a href="news/svet/KategorijaSvet.html">Svet</a></li>
-				</ul>        
-            </li>
-			<li>
-				<a href="news/tehnologija/KategorijaTehnologija.html">Tehnologije</a>            
-				<ul>
-					<li><a href="news/softver/KategorijaSoftver.html">Softver</a></li>
-					<li><a href="news/komunikacije/KategorijaKomunikacije.html">Komunikacije</a></li>
-					<li><a href="news/energetika/KategorijaEnergetika.html">Energetika</a></li>
-				</ul>        
-            </li>
-			<li>
-				<a href="news/sport/KategorijaSport.html">Sport</a>            
-				<ul>
-					<li><a href="news/fudbal/KategorijaFudbal.html">Fudbal</a></li>
-					<li><a href="news/kosarka/KategorijaKosarka.html">Košarka</a></li>
-					<li><a href="news/tenis/KategorijaTenis.html">Tenis</a></li>
-					<li><a href="news/atletika/KategorijaAtletika.html">Atletika</a></li>
-				</ul>        
-            </li>
-			<li>
-				<a href="news/kultura/KategorijaKultura.html">Kultura</a>            
-				<ul>
-					<li><a href="news/film/KategorijaFilm.html">Film</a></li>
-					<li><a href="news/slikarstvo/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
-					<li><a href="news/pozoriste/KategorijaPozoriste.html">Pozorište</a></li>
-				</ul>        
-            </li>
-            <li>
-            	<a href="#">Ažuriranje</a>            
-				<ul>
-					<li><a href="UlogujSe.html">Uloguj se</a></li>
-					<li><a href="UnesiVest.html">Unesi vest</a></li>
-					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
-				</ul>
-            </li>
-			<li><a href="Kontakt.html">Kontakt</a></li>			
-        </ul>
-    </nav>	
 
     <div id="addNewsDiv">
 
 	    <h1 style="margin-top: 50px">Unesi vest</h1>
 
-	    <form>
+	    <form id="insertingNews" method="post" action="../php/UnesiVest.php">
 	    	<p class="registerFormP">
 				<label>
 					Kategorija
@@ -108,19 +52,21 @@
 					<input type="file" name="uploadSlike" class="categorySelect">
 				</label>
 			</p>
-
-		</form>
-
+		
 		<div class="comments">
+			<p style="text-align: left;">Naslov vesti</p>
+            <input type="text" name="naslovVesti" placeholder="Naslov vesti" style="width: 100%; height: 25px">
 	    	<p style="text-align: left;">Tekst vesti</p>
-	    	<textarea style="width: 100%; height: 200px"></textarea>
+	    	<textarea name="tekstVesti"  style="width: 100%; height: 200px"></textarea>
 	    </div>
 
+	
 		<div style="margin-top: 30px">
-			<a href="Naslovna.html"><button style="float: left; height: 25px; width: 100px;">Unesi</button></a>
-			<a href="UlogujSe.html"><button style="float: right; height: 25px; width: 100px;">Otkazi</button></a>
+			<input type="submit" name="unesiVest" value="Unesi" style="height: 25px; width: 100px; margin-left: 35px;">
+	
+			<input type="submit" name="otkazi" value="Otkazi" style="height: 25px; width: 100px; margin-left: 35px;">
 		</div>
-
+</form>
 	</div>
 	
 	

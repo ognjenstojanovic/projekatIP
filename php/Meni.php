@@ -1,6 +1,6 @@
 <?php
-session_start();
-if($_SESSION['user'] != NULL){ 
+
+if(isset($_SESSION['user'])){ 
 
 echo <<< EOT
 	<nav>
@@ -62,7 +62,9 @@ echo <<< EOT
 EOT;
 
 
-}else{						
+}
+else
+{						
 					
 echo <<< EOT
 	<nav>
@@ -114,7 +116,7 @@ echo <<< EOT
             <li>
             	<a href="#">Ažuriranje</a>            
 				<ul>
-		            <li><a href="IzlogujSe.php">Izloguj se</a></li><li><a href="#">Aktivnosti</a></li>
+		            <li><a href="../php/IzlogujSe.php">Izloguj se</a></li><li><a href="#">Aktivnosti</a></li>
 					<li><a href="UnesiVest.html">Unesi vest</a></li>
 					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
