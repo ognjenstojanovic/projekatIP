@@ -84,25 +84,19 @@ echo "\n Skripta pocela\n";
 		die("Connection failed: " . $conn->connect_error);		
 	}
 
-	  $sql="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
-                VALUES (Cardinal, Tom B. Erichsen, Skage, Stavanger,4006,Norway)";
-
-
-	if(!$result = $conn->query($sql)){
-
+	
+/*	if(!$result = $conn->query($sql)){
+>>>>>>> origin/dev_vlada
 		echo $conn->error;
 		die($conn->connect_error);
   }*/
   //id iz sesije
-  //naslov...fak odakle to?
 
-
-
+  //link je relativna putanja+ime fajla
+  //Kategorija,Podkategorija-iz onog s..izvadi
   $insertQuery="INSERT INTO Vesti (IDKorisnika, Naslov, Link, BrojLajkova, BrojHejtova,Kategorija,Podkategorija)
                 VALUES (0, $naslovVesti,$linktoFIle, 0,0,$kategorija,$podkategorija)";
 
-
-}
 
 
 function test_input($data) {
