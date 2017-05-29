@@ -3,12 +3,12 @@
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $linktoFIle=$name = $podkategorija = $kategorija = $tekstVesti = $naslovVesti = "";
 
-echo "Skripta pocela\n";
+echo "\n Skripta pocela\n";
 
   //TODO:dohvati sesiju,id korsnika
 
   if (empty($_POST["uploadSlike"])) {
-    $nameErr = "GRESKA KOD FAJLA \n";
+    $nameErr = "\nGRESKA KOD FAJLA \n";
    // echo "Hello World";
     echo $nameErr;
 
@@ -17,7 +17,7 @@ echo "Skripta pocela\n";
     $newfile = 'projekatIP/images/';
 
     if (!copy($file, $newfile)) {
-     echo "failed to copy";
+    echo "\n failed to copy file\n";
     }
      echo $nameErr;
      $linktoFIle=$newfile+ $nameErr;
@@ -29,7 +29,7 @@ echo "Skripta pocela\n";
   
   if (empty($_POST["kategorija"])) {
     $kategorija = "";
-    echo "Greske kod kategorija \n";
+    echo "\n Greske kod kategorija \n";
   
   } else {
     $kategorija = test_input($_POST["kategorija"]);
@@ -39,7 +39,7 @@ echo "Skripta pocela\n";
   }  
   if (empty($_POST["podkategorija"])) {
     $podkategorija = "";
-    echo "Greske kod podkategorija \n";
+    echo "\nGreske kod podkategorija \n";
 
   } else {
     $podkategorija = test_input($_POST["podkategorija"]);
@@ -50,7 +50,7 @@ echo "Skripta pocela\n";
   
   if (empty($_POST["tekstVesti"])) {
     $tekstVesti = "";
-    echo "Greske kod teksta vesti \n";
+    echo "\n Greske kod teksta vesti \n";
 
   } else {
     $tekstVesti = test_input($_POST["tekstVesti"]);
@@ -60,7 +60,7 @@ echo "Skripta pocela\n";
   }
    if (empty($_POST["naslovVesti"])) {
     $naslovVesti = "";
-    echo "Greske kod teksta vesti \n";
+    echo  "\n Greske kod teksta vesti \n";
 
   } else {
     $naslovVesti = test_input($_POST["naslovVesti"]);
@@ -102,6 +102,6 @@ function test_input($data) {
   return $data;
 }
 
-echo "Skripta se zavrsila \n";
+echo "\n Skripta se zavrsila \n";
 
 ?>
