@@ -82,7 +82,15 @@ else{
 	<table id="topTable">
 		<tr>
 			<td style="width: 50%">	
-				
+				<!-- izvuci iz baze po rastucem za komentare sve linkove -->
+			<!--	$dataArray = array();
+
+					$qry = mysql_query("SELECT from, name FROM Vesti gde je ovo rastuce");
+
+					while($res = mysql_fetch_array($qry)) {
+						$dataArray[$res['Id']] = $res['name'];
+					}
+			-->		
 				<p id="blockTitle">Najviše lajkova</p>
 				
 				<ul>
@@ -111,8 +119,30 @@ else{
 			</td>
 			<td style="width: 50%">
 			
+			<!-- izvuci iz baze po rastucem za lajkove sve linkove -->
+			<!--	$dataArray = array();
+
+					$qry = mysql_query("SELECT from, name FROM Vesti gde je ovo rastuce");
+
+					while($res = mysql_fetch_array($qry)) {
+						$dataArray[$res['Id']] = $res['name'];
+					}
+			-->		
 				<p id="blockTitle">Najviše komentara</p>
 				
+				
+				<!--
+					echo '<ul>';			
+					$array_links;
+					$array_headlines;	
+					foreach( $array_links as $index => $link ) {
+					echo '<li><a="' . $link . '">' . $array_headlines[$index] . '</a></li>';
+					}
+					echo '</ul>';	
+					}
+
+				-->
+
 				<ul>
 						<li>
 							<a href="pages/news/economy/NedostatakVlage.html"> 		 Nedostatak vlage ugrožava prinose pšenice u Srbiji  
@@ -138,6 +168,17 @@ else{
 		</tr>
 	</table>
     <nav>
+					<!--
+					echo '<ul>';			
+					$array_links;
+					$array_headlines;	
+					foreach( $array_links as $index => $link ) {
+					echo '<li><a="' . $link . '">' . $array_headlines[$index] . '</a></li>';
+					}
+					echo '</ul>';	
+					}
+
+				-->
         <ul>
             <li>
 				<a href="Naslovna.html">Naslovna</a>
