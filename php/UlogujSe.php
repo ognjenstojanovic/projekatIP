@@ -9,30 +9,43 @@ if (isset($_POST["ulogujSe"])){
 	
 	$servername = "localhost";
 	$username = "G23";
-	$password = "123";
+	$dbPassword = "123";
 	$defaultDatabase = "portalvesti";
 	
 	// Create connection
-	$conn = new mysqli($servername, $username, $password, $defaultDatabase);
+	$conn = new mysqli($servername, $username, $dbPassword, $defaultDatabase);
 	
 	if ($conn->connect_error) {
-	echo "123";
 		die("Connection failed: " . $conn->connect_error);		
 	}
 	
 	if(!$result = $conn->query($sql)){
-		echo $conn->error;
 		die($conn->connect_error);
 	}
 		
 	if ($row = $result->fetch_assoc()){
 		session_start();
-		$_SESSION["user"] = $email;
+		
+		//ubacivanje svih podataka o korisniku u sesiju
+		$_SESSION["email"] = $email;
+		$_SESSION["password"] = $email;
+		$_SESSION["ime"] = $row["ime"];
+		$_SESSION["prezime"] = $row["prezime"];
+		$_SESSION["IDKorisnika"] = $row["IDKorisnika"];
+		$_SESSION["mobilni"] = $row["mobilni"];
+		$_SESSION["adresa"] = $row["adresa"];
+		$_SESSION["komentar"] = $row["komentar"];
+		
 		header("Location: http://localhost/pages/TacniPodaci.html");	
-
+		
+		$conn->close();
+		
 		exit();
 	}else{
 		header("Location: http://localhost/pages/PogresniPodaci.html");
+		
+		$conn->close();
+		
 		exit();
 	}
 		

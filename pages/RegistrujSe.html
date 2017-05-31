@@ -12,10 +12,10 @@
 
 	 	    <h1 style="margin-top: 50px">Registruj se</h1>
 
-	    <form action="" method="post" id="RegisterForm" name="RegisterForm" onsubmit="return validateform()">
+	    <form action="../php/RegistrujSe.php" method="post" id="RegisterForm" name="RegisterForm" onsubmit="return validateform()">
 	    	<p class="registerFormP">
 				<label>
-					Korisničko ime
+					Email
 					<input type="text" name="email" id="email" class="registerFormInput">
 				</label>
 			</p>
@@ -42,7 +42,7 @@
 			</p>
 			
 			<div style="margin-top: 30px">
-			<button type="submit" style="float: left; height: 25px; width: 100px;">Prihvati</button>
+			<button type="submit" name="registrujSe" style="float: left; height: 25px; width: 100px;">Prihvati</button>
 			<button style="float: right; height: 25px; width: 100px;">Otkazi</button>
 		</div>
 			

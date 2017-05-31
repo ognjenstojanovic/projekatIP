@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_SESSION['user'])){ 
+if(!isset($_SESSION['IDKorisnika'])){ 
 
 echo <<< EOT
 	<nav>
@@ -49,12 +49,7 @@ echo <<< EOT
 				</ul>        
             </li>
             <li>
-            	<a href="#">Ažuriranje</a>            
-				<ul>
-		            <li><a href='UlogujSe.html'>Uloguj se</a></li>
-					<li><a href="UnesiVest.html">Unesi vest</a></li>
-					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
-				</ul>
+            	<a href='UlogujSe.html'>Uloguj se</a></li>
             </li>
 			<li><a href="Kontakt.html">Kontakt</a></li>			
         </ul>
@@ -114,13 +109,14 @@ echo <<< EOT
 				</ul>        
             </li>
             <li>
-            	<a href="#">Ažuriranje</a>            
+            	<a href="#">Aktivnosti</a>            
 				<ul>
-		            <li><a href="../php/IzlogujSe.php">Izloguj se</a></li><li><a href="#">Aktivnosti</a></li>
 					<li><a href="UnesiVest.html">Unesi vest</a></li>
+					<li><a href="UnesiVest.html">Ažuriraj vest</a></li>
 					<li><a href="IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
             </li>
+			<li><a href="../php/IzlogujSe.php">Izloguj se</a></li>
 			<li><a href="Kontakt.html">Kontakt</a></li>			
         </ul>
     </nav>

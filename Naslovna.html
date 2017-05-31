@@ -183,14 +183,21 @@ $mostCommentsResult = $conn1->query($mostCommentsQuery);
 					<li><a href="pages/news/pozoriste/KategorijaPozoriste.html">Pozorište</a></li>
 				</ul>        
             </li>
-            <li>
-            	<a href="#">Ažuriranje</a>            
-				<ul>
-					<li><a href="pages/UlogujSe.html">Uloguj se</a></li>
-					<li><a href="pages/UnesiVest.html">Unesi vest</a></li>
-					<li><a href="pages/IzborNaslovne.html">Izbor naslovne</a></li>
-				</ul>
-            </li>
+			<?php
+				if(!isset($_SESSION['IDKorisnika'])){ 
+					echo '<li><a href="pages/UlogujSe.html">Uloguj se</a></li>';
+				} else {
+					echo '<li>
+							<a href="#">Aktivnosti</a>            
+							<ul>
+								<li><a href="pages/UnesiVest.html">Unesi vest</a></li>
+								<li><a href="pages/UnesiVest.html">Ažuriraj vest</a></li>
+								<li><a href="pages/IzborNaslovne.html">Izbor naslovne</a></li>
+							</ul>
+						  </li>
+						  <li><a href="php/IzlogujSe.php">Izloguj se</a></li>';
+				}	
+			?>
 			<li><a href="pages/Kontakt.html">Kontakt</a></li>			
         </ul>
     </nav>	
