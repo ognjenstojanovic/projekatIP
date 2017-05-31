@@ -10,49 +10,43 @@
        
     <div id="registerFormDiv">
 
-	    <h1 style="margin-top: 50px">Registruj se</h1>
+	 	    <h1 style="margin-top: 50px">Registruj se</h1>
 
-	    <form id="RegisterForm">
+	    <form action="" method="post" id="RegisterForm" name="RegisterForm" onsubmit="return validateform()">
 	    	<p class="registerFormP">
 				<label>
 					Korisničko ime
-					<input type="text" id="username" class="registerFormInput">
+					<input type="text" name="username" id="username" class="registerFormInput">
 				</label>
 			</p>
 
 			<p class="registerFormP">
 				<label>
 					Lozinka
-					<input type="text" id="password" class="registerFormInput">
+					<input type="text" name="password" id="password" class="registerFormInput">
 				</label>
 			</p>
 
 			<p class="registerFormP">
 				<label>
 					Adresa
-					<input type="text" id="address" class="registerFormInput">
+					<input type="text" name="address" id="address" class="registerFormInput">
 				</label>
 			</p>
 
 			<p class="registerFormP">
 				<label>
 					Mobilni telefon
-					<input type="text" id="mobilni" class="registerFormInput">
+					<input type="text" name="mobile" id="mobilni" class="registerFormInput">
 				</label>
 			</p>
-
-			<p class="registerFormP">
-				<label>
-					Lozinka
-					<input type="text" id="email" class="registerFormInput">
-				</label>
-			</p>
-		</form>
-
-		<div style="margin-top: 30px">
-			<a href="Naslovna.html"><button onsubmit="return validateForm()" style="float: left; height: 25px; width: 100px;">Prihvati</button></a>
-			<a href="UlogujSe.html"><button style="float: right; height: 25px; width: 100px;">Otkazi</button></a>
+			
+			<div style="margin-top: 30px">
+			<button type="submit" style="float: left; height: 25px; width: 100px;">Prihvati</button>
+			<button style="float: right; height: 25px; width: 100px;">Otkazi</button>
 		</div>
+			
+		</form>
 
 	</div>
 	

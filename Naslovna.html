@@ -68,12 +68,31 @@ if (isset($_POST["unesiVest"])){
 		die("Connection failed: " . $conn->connect_error);		
 	}
 	
-	$conn->close();
+	$conn->close();		
 									
 }
 else{
 	
 }
+
+$servername = "localhost";
+$username = "G23";
+$password = "123";
+$defaultDatabase = "portalvesti";
+	
+// Create connection
+$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+// Check connection
+if ($conn1->connect_error) {
+	die("Connection failed: " . $conn->connect_error);		
+}
+
+$mostLikesQuery = "SELECT * FROM Vesti ORDER BY BrojLajkova DESC";
+$mostCommentsQuery = "SELECT * FROM Vesti ORDER BY (SELECT COUNT(*) FROM Komentari WHERE IDVesti = Vesti.IDVesti) DESC";
+	
+$mostLikesResult = $conn1->query($mostLikesQuery);	
+$mostCommentsResult = $conn1->query($mostCommentsQuery);
+
 
 ?>
 
@@ -82,103 +101,43 @@ else{
 	<table id="topTable">
 		<tr>
 			<td style="width: 50%">	
-				<!-- izvuci iz baze po rastucem za komentare sve linkove -->
-			<!--	$dataArray = array();
-
-					$qry = mysql_query("SELECT from, name FROM Vesti gde je ovo rastuce");
-
-					while($res = mysql_fetch_array($qry)) {
-						$dataArray[$res['Id']] = $res['name'];
-					}
-			-->		
+				
 				<p id="blockTitle">Najviše lajkova</p>
 				
-				<ul>
-						<li>
-							<a href="pages/news/economy/NajvaznijeStoDaljeOdPOlitike.html">NAJVAŽNIJE: ŠTO DALJE OD POLITIKE
-</a>
-						</li>
-						<li>
-							<a href="pages/news/fudbal/Kockice.html"> KOCKICE SU SE SLOŽILE Ivan Obradović za Blicsport: Muslin ima odlične ideje, konačno je došao selektor sa autoritetom 
-</a>
-						</li>
-						<li>
-							<a href="pages/news/kultura/Festival.html">  Festival igre: SVE RASPRODATO do kraja! 
-</a>
-						</li>
-						<li>
-							<a href="pages/news/kosarka/Evroliga.html">   EVROLIGA Poznati svi parovi četvrtfinala: Žoc protiv “svojih” 
-</a>
-						</li>
-						<li>
-							<a href="pages/news/sport/Maestralno.html">    MAESTRALNO Troicki preslišao Bustu i doveo Srbiju na korak od pobede! 
-</a>
-						</li>
+				<ul>						
+						<?php 
+						
+							while($row = $mostLikesResult->fetch_assoc())
+							{
+								echo '<li><a href="' . $row["link"] . '">' . $row["naslov"] . '</a></li>';
+							}						
+						
+						?>
 				</ul>
 					
 			</td>
 			<td style="width: 50%">
-			
-			<!-- izvuci iz baze po rastucem za lajkove sve linkove -->
-			<!--	$dataArray = array();
-
-					$qry = mysql_query("SELECT from, name FROM Vesti gde je ovo rastuce");
-
-					while($res = mysql_fetch_array($qry)) {
-						$dataArray[$res['Id']] = $res['name'];
-					}
-			-->		
-				<p id="blockTitle">Najviše komentara</p>
-				
-				
-				<!--
-					echo '<ul>';			
-					$array_links;
-					$array_headlines;	
-					foreach( $array_links as $index => $link ) {
-					echo '<li><a="' . $link . '">' . $array_headlines[$index] . '</a></li>';
-					}
-					echo '</ul>';	
-					}
-
-				-->
+						
+				<p id="blockTitle">Najviše komentara</p>										
 
 				<ul>
-						<li>
-							<a href="pages/news/economy/NedostatakVlage.html"> 		 Nedostatak vlage ugrožava prinose pšenice u Srbiji  
-</a>
-						</li>
-						<li>
-							<a href="pages/news/economy/NajvaznijeStoDaljeOdPOlitike.html">NAJVAŽNIJE: ŠTO DALJE OD POLITIKE
-</a>
-						</li>
-						<li>
-							<a href="pages/news/politika/NovaStranka.html">Nova stranka na političkom nebu BiH: Izvornu Srpsku formirao Vitomir Popović </a>
-						</li>
-						<li>
-							<a href="pages/news/politika/Istoricarka.html"> Istoričarka Dubravka Stojanović: Srbija se nije odrekla Miloševićeve politike 
-</a>
-						</li>
-						<li>
-							<a href="pages/news/kultura/Od.html">Od Čerčila do Trampa RUŽNA STRANA POLITIKE na karikaturama</a>
-						</li>
+						<?php 
+						
+							while($row = $mostCommentsResult->fetch_assoc())
+							{
+								echo '<li><a href="' . $row["link"] . '">' . $row["naslov"] . '</a></li>';
+							}						
+							
+							$conn1->close();
+							
+						?>
 				</ul>
 				
 			</td>
 		</tr>
 	</table>
     <nav>
-					<!--
-					echo '<ul>';			
-					$array_links;
-					$array_headlines;	
-					foreach( $array_links as $index => $link ) {
-					echo '<li><a="' . $link . '">' . $array_headlines[$index] . '</a></li>';
-					}
-					echo '</ul>';	
-					}
-
-				-->
+					
         <ul>
             <li>
 				<a href="Naslovna.html">Naslovna</a>
