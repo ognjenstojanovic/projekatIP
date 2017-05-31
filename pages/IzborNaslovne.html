@@ -1,7 +1,6 @@
 <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
 
 <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"></head><body>
-
 <div id="wrapper">
 
     <?php 
@@ -9,8 +8,11 @@
 	?>        
 	
     <h1 style="margin-top: 50px">Izaberite postavku naslovne strane</h1>
+	 
+	 <form action="" method="post" id="sortingForm" name="sortingForm" >
 
 	<table id="bottomTable">
+
 		<tr>
 			<td class="bottomTableTd">
 				<p id="blockTitle">
@@ -19,24 +21,8 @@
 					</h4>
 				</p>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect" id="tryone" name="tryone" onclick="myFunction1(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -55,24 +41,8 @@
 					2
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect" onclick="myFunction1(this)"  onselect="myFunction2(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -91,24 +61,8 @@
 					3
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect" onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -129,31 +83,15 @@
 					4
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect"  onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+				
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
 					Sortiranje
 				</h4>
 				
-				<select class="frontPageSort">
+				<select class="frontPageSort" onclick="myFunction1(this)">
 						<option value="PoVremenu">Po Vremenu</option>
 						<option value="PoLajkovima">Po Lajkovima</option>
   						<option value="PoKomentarima">Po Komentarima</option>
@@ -165,24 +103,8 @@
 					5
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect" onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+					
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -201,24 +123,8 @@
 					6
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect" onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -239,24 +145,8 @@
 					7
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect"  onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+			
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -275,24 +165,8 @@
 					8
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect"  onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -311,24 +185,8 @@
 					9
 				</h4>
 				
-				<select class="frontPageSelect">
-						<option value="Ekonomija">Ekonomija</option>
-						<option value="Privreda">Privreda</option>
-  						<option value="Finansije">Finansije</option>
-  						<option value="Biznis">Biznis</option>
-  						<option value="Politika">Politika</option>
-  						<option value="Domaća">Domaća</option>
-  						<option value="Regionalna">Regionalna</option>
-  						<option value="Svet">Svet</option>
-  						<option value="Sport">Sport</option>
-  						<option value="Fudbal">Fudbal</option>
-  						<option value="Košarka">Košarka</option>
-  						<option value="Atletika">Atletika</option>
-  						<option value="Kultura">Kultura</option>
-  						<option value="Film">Film</option>
-  						<option value="Pozorište">Pozorište</option>
-  						<option value="Slikarstvo">Slikarstvo</option>
-  						<option value="Muzika">Muzika</option>
+				<select class="frontPageSelect"  onclick="myFunction1(this)" onselect="myFunction2(this)" onchange="myFunction2(this)">
+						
 				</select>
 				
 				<h4 style="text-align: center; padding-top: 10px; ">
@@ -343,6 +201,7 @@
 			</td>
 		</tr>
 	</table>
+	</form>
 
 	<div  id="sortingDiv">
 		<label style="color: #1aedc2">
@@ -357,5 +216,5 @@
 	 
 	
 </div>
-
+<script src="../js/Base.js"></script>
 </body></html>
