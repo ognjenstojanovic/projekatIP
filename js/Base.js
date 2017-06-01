@@ -1,8 +1,8 @@
 var konstante = ["","Ekonomija", "Privreda", "Finansije", "Biznis", "Politika","Domaća","Regionalna","Svet","Sport","Fudbal","Košarka","Atletika","Kultura","Film","Pozorište","Slikarstvo","Muzika"];
 
 var kategorijeDinamicke = ["","Ekonomija", "Privreda", "Finansije", "Biznis", "Politika","Domaća","Regionalna","Svet","Sport","Fudbal","Košarka","Atletika","Kultura","Film","Pozorište","Slikarstvo","Muzika"];
-//var postavljeno =["0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0","0"];
-
+var postavljeno =["","","","","","","","",""];
+var indeksi=[];
 
 function myFunction1(obj) {
     if(obj.childElementCount==0){
@@ -20,8 +20,24 @@ function myFunction1(obj) {
 }
 function myFunction2(obj) {
      alert("I am an alert box!"+obj.selectedIndex);
+     var index3=indeksi.indexOf(obj.id);
+     if(index3==-1){
+
      var index=kategorijeDinamicke.indexOf(obj.options[obj.selectedIndex].value);
+
      if(index!=-1 && index!=0){ //jer prvi element ne smemo da izbacimo..on je tu..ono..radi z
-        kategorijeDinamicke.splice(index, 1);
+
+        var index2=postavljeno.indexOf(obj.id);
+
+        if(index2 ==-1){
+
+           postavljeno[obj.id]=obj.option[obj.selectedIndex].value;
+           indeksi.push(obj.id);
+           kategorijeDinamicke.splice(index, 1);
+            
+             }else{
+
+            }
+        }
      }
 }
