@@ -31,13 +31,11 @@ function myFunction2(obj) {
 
         if(index2 ==-1){
 
-           postavljeno[obj.id]=obj.option[obj.selectedIndex].value;
+           postavljeno[obj.id]="1";
            indeksi.push(obj.id);
            kategorijeDinamicke.splice(index, 1);
             
-             }else{
-
-            }
+             }
         }
      }
 }
