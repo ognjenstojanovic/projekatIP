@@ -59,7 +59,7 @@ $createTablesql = "CREATE TABLE Korisnici (
 								slika nvarchar(1000),
 								komentar nvarchar(1000),
 								PodrazumevanoSortiranje nvarchar(100),
-								PostavkaNaslovneStrane nvarchar(max),
+								PostavkaNaslovneStrane nvarchar(1000),
 								PRIMARY KEY (IDKorisnika)
 								)";
 
@@ -75,7 +75,7 @@ $createTablesql = "CREATE TABLE Komentari (
 								IDVesti int NOT NULL,
 								BrojLajkova int,
 								BrojHejtova int,
-								TekstKomentara nvarchar(max),
+								TekstKomentara nvarchar(1000),
 								NaslovKomentara nvarchar(100),
 								PRIMARY KEY (IDKomentara)
 								)";

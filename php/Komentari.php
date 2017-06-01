@@ -14,15 +14,35 @@ if ($conn1->connect_error) {
 
 $url = $_SERVER['REQUEST_URI'];
 
-$IDVesti = substr(strrpos($url, '\')+1, strrpos($url, '.'));
+$substring = substr($_SERVER['REQUEST_URI'], strrpos($_SERVER['REQUEST_URI'], "/") + 1);
 
-$queryKomentari = "SELECT * FROM Komentari WHERE IDVesti = " . $IDVesti;
+$idVesti=substr($substring, 0, strpos($substring, "."));
+
+$queryKomentari = "SELECT * FROM Komentari WHERE IDVesti = " . $idVesti;
 
 $result = $conn1->query($queryKomentari);
 
 while($row = $result->fetch_assoc())
 {
-	echo "komentar";
+	$idKorisnika = $row["IDKorisnika"];
+
+	$query = "SELECT * FROM Korisnici WHERE IDKorisnika = " . $idKorisnika;
+
+	$korisnik = $conn1->query($query);
+
+	$imeKorisnika = "";
+
+	while($row1 = $korisnik->fetch_assoc())
+	{
+		$imeKorisnika = $row1["ime"];
+	}	
+
+
+	echo '<div class="comment"><p class="commenter">';
+	echo $imeKorisnika . ": " . $row["NaslovKomentara"];
+	echo '</p>';
+	echo $row["TekstKomentara"];
+	echo '</div>';
 }
 
 $conn1->close();
