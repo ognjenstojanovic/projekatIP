@@ -14,7 +14,14 @@ echo "\n Skripta pocela\n";
 
   } else {
     $nameErr = test_input($_POST["uploadSlike"]);
-    $newfile = 'projekatIP/images/';
+    $newfile = '..\images\\';
+    //otvir fajl u images..gde vec
+    //dohvati last IDVesti
+    $lastIDVesti=1;//Ognjene izvini :/ numem
+    $fileDest=getcwd() . $newfile . $lastIDVesti .".jpg";
+    echo $fileDest;
+    $newfile = fopen($fileDest, "w") or die("Unable to open file!");
+    $fileSource="";
 
     if (!copy($file, $newfile)) {
     echo "\n failed to copy file\n";

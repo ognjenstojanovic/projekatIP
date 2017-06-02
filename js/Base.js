@@ -15,9 +15,10 @@ function myFunction1(obj) {
             obj.appendChild(option);
  //               }
     }
+
 }
-    
 }
+
 function myFunction2(obj) {
      alert("I am an alert box!"+obj.selectedIndex);
      var index3=indeksi.indexOf(obj.id);
