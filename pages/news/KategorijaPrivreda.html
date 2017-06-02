@@ -24,7 +24,7 @@
 			die("Connection failed: " . $conn->connect_error);		
 		}
 
-		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Privreda' OR Podkategorija= 'Privreda'";
 
 		$result = $conn1->query($query);
 
