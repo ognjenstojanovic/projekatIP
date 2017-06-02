@@ -1,6 +1,6 @@
 <?php
 session_start();
-if($_SESSION["user"] != NULL){
+if($_SESSION["IDKorisnika"] != NULL){
 
 echo <<< EOT
 	<nav>
@@ -9,56 +9,55 @@ echo <<< EOT
 				<a href="Naslovna.html">Naslovna</a>
 			</li>
             <li>
-				<a href="pages/pages/news/economy/KategorijaEkonomija.html">Ekonomija</a>
+				<a href="pages/news/KategorijaEkonomija.html">Ekonomija</a>
 				<ul>
-					<li><a href="pages/pages/news/privreda/KategorijaPrivreda.html">Privreda</a></li>
-					<li><a href="pages/pages/news/finansije/KategorijaFinansije.html">Finansije</a></li>
-					<li><a href="pages/news/biznis/KategorijaBiznis.html">Biznis</a></li>
+					<li><a href="pages/news/KategorijaPrivreda.html">Privreda</a></li>
+					<li><a href="pages/news/KategorijaFinansije.html">Finansije</a></li>
+					<li><a href="pages/news/KategorijaBiznis.html">Biznis</a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="pages/news/politika/KategorijaPolitika.html">Politika</a>            
+				<a href="pages/news/KategorijaPolitika.html">Politika</a>            
 				<ul>
-					<li><a href="pages/news/domaca/KategorijaDomaca.html">Domaca</a></li>
-					<li><a href="pages/news/regionalna/KategorijaRegionalna.html">Regionalna</a></li>
-					<li><a href="pages/news/svet/KategorijaSvet.html">Svet</a></li>
+					<li><a href="pages/news/KategorijaDomaca.html">Domaca</a></li>
+					<li><a href="pages/news/KategorijaRegionalna.html">Regionalna</a></li>
+					<li><a href="pages/news/KategorijaSvet.html">Svet</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/tehnologija/KategorijaTehnologija.html">Tehnologije</a>            
+				<a href="pages/news/KategorijaTehnologija.html">Tehnologije</a>            
 				<ul>
-					<li><a href="pages/news/softver/KategorijaSoftver.html">Softver</a></li>
-					<li><a href="pages/news/komunikacije/KategorijaKomunikacije.html">Komunikacije</a></li>
-					<li><a href="pages/news/energetika/KategorijaEnergetika.html">Energetika</a></li>
+					<li><a href="pages/news/KategorijaSoftver.html">Softver</a></li>
+					<li><a href="pages/news/KategorijaKomunikacije.html">Komunikacije</a></li>
+					<li><a href="pages/news/KategorijaEnergetika.html">Energetika</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/sport/KategorijaSport.html">Sport</a>            
+				<a href="pages/news/KategorijaSport.html">Sport</a>            
 				<ul>
-					<li><a href="pages/news/fudbal/KategorijaFudbal.html">Fudbal</a></li>
-					<li><a href="pages/news/kosarka/KategorijaKosarka.html">Košarka</a></li>
-					<li><a href="pages/news/tenis/KategorijaTenis.html">Tenis</a></li>
-					<li><a href="pages/news/atletika/KategorijaAtletika.html">Atletika</a></li>
+					<li><a href="pages/news/KategorijaFudbal.html">Fudbal</a></li>
+					<li><a href="pages/news/KategorijaKosarka.html">Koï¿½arka</a></li>
+					<li><a href="pages/news/KategorijaTenis.html">Tenis</a></li>
+					<li><a href="pages/news/KategorijaAtletika.html">Atletika</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/kultura/KategorijaKultura.html">Kultura</a>            
+				<a href="pages/news/KategorijaKultura.html">Kultura</a>            
 				<ul>
-					<li><a href="pages/news/film/KategorijaFilm.html">Film</a></li>
-					<li><a href="pages/news/slikarstvo/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
-					<li><a href="pages/news/pozoriste/KategorijaPozoriste.html">Pozorište</a></li>
+					<li><a href="pages/news/KategorijaFilm.html">Film</a></li>
+					<li><a href="pages/news/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
+					<li><a href="pages/news/KategorijaPozoriste.html">Pozoriï¿½te</a></li>
 				</ul>        
             </li>
 		    <li>
-				<a href="#">Ažuriranje</a>            
+				<a href="#">Aï¿½uriranje</a>            
 				<ul>
-					<li><a href="pages/AžurirajVest.html">Ažuriraj vest</a></li>
+					<li><a href="pages/Aï¿½urirajVest.html">Aï¿½uriraj vest</a></li>
 					<li><a href="pages/UnesiVest.html">Unesi vest</a></li>
 					<li><a href="pages/IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
 			</li>
-			<li><a href='php/IzlogujSe.php'>Izloguj se</a></li>
-			       
+			<li><a href='php/IzlogujSe.php'>Izloguj se</a></li>			       
 			<li><a href="pages/Kontakt.html">Kontakt</a></li>			
         </ul>
     </nav>
@@ -73,44 +72,44 @@ echo <<< EOT
 				<a href="Naslovna.html">Naslovna</a>
 			</li>
             <li>
-				<a href="pages/pages/news/economy/KategorijaEkonomija.html">Ekonomija</a>
+				<a href="pages/news/KategorijaEkonomija.html">Ekonomija</a>
 				<ul>
-					<li><a href="pages/pages/news/privreda/KategorijaPrivreda.html">Privreda</a></li>
-					<li><a href="pages/pages/news/finansije/KategorijaFinansije.html">Finansije</a></li>
-					<li><a href="pages/news/biznis/KategorijaBiznis.html">Biznis</a></li>
+					<li><a href="pages/news/KategorijaPrivreda.html">Privreda</a></li>
+					<li><a href="pages/news/KategorijaFinansije.html">Finansije</a></li>
+					<li><a href="pages/news/KategorijaBiznis.html">Biznis</a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="pages/news/politika/KategorijaPolitika.html">Politika</a>            
+				<a href="pages/news/KategorijaPolitika.html">Politika</a>            
 				<ul>
-					<li><a href="pages/news/domaca/KategorijaDomaca.html">Domaca</a></li>
-					<li><a href="pages/news/regionalna/KategorijaRegionalna.html">Regionalna</a></li>
-					<li><a href="pages/news/svet/KategorijaSvet.html">Svet</a></li>
+					<li><a href="pages/news/KategorijaDomaca.html">Domaca</a></li>
+					<li><a href="pages/news/KategorijaRegionalna.html">Regionalna</a></li>
+					<li><a href="pages/news/KategorijaSvet.html">Svet</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/tehnologija/KategorijaTehnologija.html">Tehnologije</a>            
+				<a href="pages/news/KategorijaTehnologija.html">Tehnologije</a>            
 				<ul>
-					<li><a href="pages/news/softver/KategorijaSoftver.html">Softver</a></li>
-					<li><a href="pages/news/komunikacije/KategorijaKomunikacije.html">Komunikacije</a></li>
-					<li><a href="pages/news/energetika/KategorijaEnergetika.html">Energetika</a></li>
+					<li><a href="pages/news/KategorijaSoftver.html">Softver</a></li>
+					<li><a href="pages/news/KategorijaKomunikacije.html">Komunikacije</a></li>
+					<li><a href="pages/news/KategorijaEnergetika.html">Energetika</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/sport/KategorijaSport.html">Sport</a>            
+				<a href="pages/news/KategorijaSport.html">Sport</a>            
 				<ul>
-					<li><a href="pages/news/fudbal/KategorijaFudbal.html">Fudbal</a></li>
-					<li><a href="pages/news/kosarka/KategorijaKosarka.html">Košarka</a></li>
-					<li><a href="pages/news/tenis/KategorijaTenis.html">Tenis</a></li>
-					<li><a href="pages/news/atletika/KategorijaAtletika.html">Atletika</a></li>
+					<li><a href="pages/news/KategorijaFudbal.html">Fudbal</a></li>
+					<li><a href="pages/news/KategorijaKosarka.html">Koï¿½arka</a></li>
+					<li><a href="pages/news/KategorijaTenis.html">Tenis</a></li>
+					<li><a href="pages/news/KategorijaAtletika.html">Atletika</a></li>
 				</ul>        
             </li>
 			<li>
-				<a href="pages/news/kultura/KategorijaKultura.html">Kultura</a>            
+				<a href="pages/news/KategorijaKultura.html">Kultura</a>            
 				<ul>
-					<li><a href="pages/news/film/KategorijaFilm.html">Film</a></li>
-					<li><a href="pages/news/slikarstvo/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
-					<li><a href="pages/news/pozoriste/KategorijaPozoriste.html">Pozorište</a></li>
+					<li><a href="pages/news/KategorijaFilm.html">Film</a></li>
+					<li><a href="pages/news/KategorijaSlikarstvo.html">Slikarstvo</a></li>				
+					<li><a href="pages/news/KategorijaPozoriste.html">Pozoriï¿½te</a></li>
 				</ul>        
             </li>
 			<li><a href='pages/UlogujSe.html'>Uloguj se</a></li>   

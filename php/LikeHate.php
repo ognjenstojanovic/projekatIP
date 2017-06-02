@@ -34,11 +34,11 @@ echo '<form id="likehate" method="post" action="../../php/LikeDislike.php"><div 
 
 echo $brojLajkova;
 
-echo ' <button style="vertical-align: middle;" type="submit" name="lajkuj">Lajkuj</button> Hejtova: ';
+echo ' <button class="likeButton" style="vertical-align: middle;" type="submit" name="lajkuj">Lajkuj</button> Hejtova: ';
 		
 echo $brojHejtova;
 
-echo ' <button style="vertical-align: middle;" type="submit" name="hejtuj">Hejtuj</button></div></form>';
+echo ' <button class="hateButton" style="vertical-align: middle;" type="submit" name="hejtuj">Hejtuj</button></div></form>';
 
 
 
