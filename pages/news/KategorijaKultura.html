@@ -13,72 +13,32 @@
  	</h1>	
 	
 	<table>
-		<tr>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">  Festival igre: SVE RASPRODATO do kraja!</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/festival.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Festival.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  Gorčin Stojanović: Kad bi Beograd imao...   </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/gorcin.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Gorcin.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">"Panta rhei", ispovedni film Ljubiše Samardžića, koji je otvorio Martovski festival u Beogradu</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/smoki.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Smoki.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> Hana Selimović dobila nagradu i posvetila je studentima koji protestuju </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/hana.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Hana.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle"> Jedna od najboljih predstava sezone večeras u Beogradu: Stanje šoka na sceni Sava centra  </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/jedna.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Jedna.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  Kolarac potpisao ugovor sa Ministarstvom kulture o sufinansiranju dela troškova   </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/kolarac.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Kolarac.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> Od Čerčila do Trampa RUŽNA STRANA POLITIKE na karikaturama </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/od.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Od.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">"Prvi put mogu da gledam suprugu u oči kada uveče ostanemo sami"</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/kultura/prvi.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../../news/kultura/Prvi.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-		</tr>
+		<?php
+
+		$servername = "localhost";
+		$username = "G23";
+		$password = "123";
+		$defaultDatabase = "portalvesti";
+			
+		// Create connection
+		$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+		// Check connection
+		if ($conn1->connect_error) {
+			die("Connection failed: " . $conn->connect_error);		
+		}
+
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+
+		$result = $conn1->query($query);
+
+		while($row = $result->fetch_assoc())
+		{
+			echo 'Vest';
+		}
+
+		$conn1->close();
+
+		?>
 	</table>
 	
 </div>

@@ -13,73 +13,32 @@
  	</h1>	
 	
 	<table>
-		<tr>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">Albanija zahteva da se spreči da kriza u Makedoniji postane međunacionalna </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/albanija.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/PremijerHrvatske.htmlPremijerHrvatske.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  Čepurin: Vučić dobio mandat da nastavi svoju politiku  
-</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/cepurin.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Cepurin.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">AMBICIOZNI POPAJ Eskobarov ubica hoće u politiku </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/eskobar.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Eskobar.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">"GVOZDENE ŽENE" Zbog njih Putin vlada ČVRSTOM RUKOM </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/gvozdene.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Gvozdene.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">Istoričarka Dubravka Stojanović: Srbija se nije odrekla Miloševićeve politike </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/istoricarka.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Istoricarka.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> ISTRAŽUJEMO Da li na Balkanu ekonomija može da pobedi nacionalizam </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/istrazujemo.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Istrazujemo.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  KRAH PUTINOVIH SLEDBENIKA U EU Nakon Holandije, i Bugarska rekla NJET, Evropa uzvraća udarac </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/krah.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Krah.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Lepe, obrazovane, uspešne: Sve više žena i devojaka iz BiH ULAZI U POLITIKU, a evo ko su one</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/politika/lepe.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../politika/Lepe.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-		</tr>
+		<?php
+
+		$servername = "localhost";
+		$username = "G23";
+		$password = "123";
+		$defaultDatabase = "portalvesti";
+			
+		// Create connection
+		$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+		// Check connection
+		if ($conn1->connect_error) {
+			die("Connection failed: " . $conn->connect_error);		
+		}
+
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+
+		$result = $conn1->query($query);
+
+		while($row = $result->fetch_assoc())
+		{
+			echo 'Vest';
+		}
+
+		$conn1->close();
+
+		?>
 	</table>
 	
 </div>

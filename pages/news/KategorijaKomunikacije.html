@@ -13,73 +13,32 @@
  	</h1>	
 	
 	<table>
-		<tr>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle"> Bežična projekcija sadržaja sa noutbuka na televizoru</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/bezicna.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Bezicna.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> "Fudžicu" predstavlja prvi bežični PC monitor na svetu</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/fudzitsu.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Fudzitsu.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  Testirali smo WiMAX internet </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/testirali.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Testirali.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  NAJIŠČEKIVANIJI FESTIVAL U GODINI: Dani komunikacija u Rovinju
-</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/festival.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Festival.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle"> Prvi 3D hologram za komunikaciju </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/prvi.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Prvi.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> Bežični punjači za mobilne telefone od 2012. </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/punjaci.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Punjaci.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> Tesla je pre više od 100 godina postavio temelje bežične komunikacije </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/tesla.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Tesla.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Weekend Media Festival otkriva kako iskoristiti najbolji potencijal svojih zaposlenih</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/komunikacije/weekend.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="Weekend.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-		</tr>
+		<?php
+
+		$servername = "localhost";
+		$username = "G23";
+		$password = "123";
+		$defaultDatabase = "portalvesti";
+			
+		// Create connection
+		$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+		// Check connection
+		if ($conn1->connect_error) {
+			die("Connection failed: " . $conn->connect_error);		
+		}
+
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+
+		$result = $conn1->query($query);
+
+		while($row = $result->fetch_assoc())
+		{
+			echo 'Vest';
+		}
+
+		$conn1->close();
+
+		?>
 	</table>
 	
 </div>

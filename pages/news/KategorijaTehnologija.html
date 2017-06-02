@@ -13,72 +13,32 @@
  	</h1>	
 	
 	<table>
-		<tr>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">Zamrzavanje organa - SPAS za medicinu</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/zamrzavanje.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="PremijerHrvatske.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> Otkud ruski "suhoji" na nebu iznad NEVADE?</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/suhoj.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea....<a href="PromenaVlasnika.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle"> BUDUĆNOST JE STIGLA Ruski inženjeri napravili leteći motocikl </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/san.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea....<a href="RastPrometa.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Jezivi robot Sofija: "Ja ću postajati sve više kao vi, a VI KAO JA" </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/jezivi.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="PKSVodiKompanije.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">  Mark Zakerberg je prvi put u životu izašao pred SUD, a sa njim i velike TAJNE FEJSBUKA </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/mark.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="KrahBerze.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">NAJVAŽNIJE: ŠTO DALJE OD POLITIKE</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/economy/sto_dalje_od_politke.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="NajvaznijeStoDaljeOdPOlitike.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Naivno?</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/naivno.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea....<a href="NedostatakVlage.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  OSTVARENJE SNA Fejsbuk radi na razvoju tehnologije za TELEPATIJU</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/tehnologija/ostvarenje.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="PovecaniUvoziIzvoz.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-		</tr>
+		<?php
+
+		$servername = "localhost";
+		$username = "G23";
+		$password = "123";
+		$defaultDatabase = "portalvesti";
+			
+		// Create connection
+		$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+		// Check connection
+		if ($conn1->connect_error) {
+			die("Connection failed: " . $conn->connect_error);		
+		}
+
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+
+		$result = $conn1->query($query);
+
+		while($row = $result->fetch_assoc())
+		{
+			echo 'Vest';
+		}
+
+		$conn1->close();
+
+		?>
 	</table>
 	
 </div>

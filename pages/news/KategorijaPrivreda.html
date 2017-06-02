@@ -10,72 +10,32 @@
  	</h1>	
 	
 	<table>
-		<tr>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">Siniša Milić, gradonačelnik Brčkog: „Privreda i nova radna mesta su nam prioritet“ </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/brcko.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Brcko.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Čadež: Jedinstveni komorski sistem za rast srpske privrede </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/cadez.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Cadez.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Direktor Nemačko-srpske privredne komore: Uspeh dualnog obrazovanja jeste u povezanosti privrede i škola</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/direktor.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Direktor.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Dodik se jedini pita u Srpskoj: HEROJ ili UZURPATOR vlasti </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/dodik.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Dodik.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-			<td>
-				<ul id="categoryList">
-					<li>
-						<h4 class="newsListTitle">ONLAJN FISKALIZACIJA Privrednici će morati da menjaju 180.000 fiskalnih kasa </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/fiskalizacija.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Fiskalizacija.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">  Eh, ta Finska: Problem su im PREVISOKE PLATE </h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/finska.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Finska.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Goldstin: Srbija i Albanija prednjače po rastu u regionu</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/goldstin.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/Goldstin.html">pročitaj više</a></p>
-						</div>
-					</li>
-					<li>
-						<h4 class="newsListTitle">Neočekivani pad grčke privrede</h4>
-						<div class="newsListDiv">
-							<img src="../../../images/privreda/grcka.jpg" class="blockImage" />
-							<p class="newsListP">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea.... <a href="../privreda/grcka.html">pročitaj više</a></p>
-						</div>
-					</li>
-				</ul>
-			</td>
-		</tr>
+		<?php
+
+		$servername = "localhost";
+		$username = "G23";
+		$password = "123";
+		$defaultDatabase = "portalvesti";
+			
+		// Create connection
+		$conn1 = new mysqli($servername, $username, $password, $defaultDatabase);
+		// Check connection
+		if ($conn1->connect_error) {
+			die("Connection failed: " . $conn->connect_error);		
+		}
+
+		$query = "SELECT * FROM Vesti WHERE Kategorija = 'Atletika' OR Podkategorija= 'Atletika'";
+
+		$result = $conn1->query($query);
+
+		while($row = $result->fetch_assoc())
+		{
+			echo 'Vest';
+		}
+
+		$conn1->close();
+
+		?>
 	</table>
 	
 </div>
