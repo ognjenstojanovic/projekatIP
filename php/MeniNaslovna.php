@@ -1,6 +1,7 @@
 <?php
 session_start();
-if($_SESSION["IDKorisnika"] != NULL){
+
+if(isset($_SESSION['IDKorisnika'])){
 
 echo <<< EOT
 	<nav>
