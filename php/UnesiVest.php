@@ -7,31 +7,42 @@ echo "\n Skripta pocela\n";
 
   //TODO:dohvati sesiju,id korsnika
 
-  if (empty($_POST["uploadSlike"])) {
+  if (isset($_POST["uploadSlike"])) {
     $nameErr = "\nGRESKA KOD FAJLA \n";
    // echo "Hello World";
     echo $nameErr;
 
   } else {
-    $nameErr = test_input($_POST["uploadSlike"]);
-    $newfile = '..\images\\';
-    //otvir fajl u images..gde vec
-    //dohvati last IDVesti
-    $lastIDVesti=1;//Ognjene izvini :/ numem
-    $fileDest=getcwd() . $newfile . $lastIDVesti .".jpg";
-    echo $fileDest;
-    $newfile = fopen($fileDest, "w") or die("Unable to open file!");
-    $fileSource="";
+    $target_dir = "../images/";
+    $target_file = $target_dir . basename($_FILES["uploadSlike"]["name"]);
+    $uploadOk = 1;
+    $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
-    if (!copy($file, $newfile)) {
-    echo "\n failed to copy file\n";
+    // Check if image file is a actual image or fake image
+    if(isset($_POST["submit"])) {
+   
+        $check = getimagesize($_FILES["uploadSlike"]["tmp_name"]);
+        if($check !== false) {
+            echo "File is an image - " . $check["mime"] . ".";
+            $uploadOk = 1;
+        } else {
+            echo "File is not an image.";
+            $uploadOk = 0;
+        }
     }
-     echo $nameErr;
-     $linktoFIle=$newfile+ $nameErr;
-     //realno ovde bi trebaso da ide id vesti..jer ne postoje 2 slike..samo ime slike nije 
-     //relevantno za celu stvar...zar ne?
-    //
- 
+
+    // Check if $uploadOk is set to 0 by an error
+    if ($uploadOk == 0) {
+        echo "Sorry, your file was not uploaded.";
+    // if everything is ok, try to upload file
+    } else {
+        if (move_uploaded_file($_FILES["uploadSlike"]["tmp_name"], $target_file)) {
+            echo "The file ". basename( $_FILES["uploadSlike"]["name"]). " has been uploaded.";
+        } else {
+            echo "Sorry, there was an error uploading your file.";
+        }
+    }
+
   }
   
   if (empty($_POST["kategorija"])) {
