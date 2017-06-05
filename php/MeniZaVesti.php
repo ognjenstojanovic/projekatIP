@@ -114,7 +114,7 @@ echo <<< EOT
             	<a href="#">Aktivnosti</a>            
 				<ul>
 					<li><a href="../UnesiVest.html">Unesi vest</a></li>
-					<li><a href="../UnesiVest.html">A�uriraj vest</a></li>
+					<li><a href="../Azuriranje.html">A�uriraj vest</a></li>
 					<li><a href="../IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
             </li>

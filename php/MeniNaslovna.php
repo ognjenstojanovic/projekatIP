@@ -52,9 +52,9 @@ echo <<< EOT
             </li>
 		    <li>
 				<a href="#">A�uriranje</a>            
-				<ul>
-					<li><a href="pages/A�urirajVest.html">A�uriraj vest</a></li>
+				<ul>					
 					<li><a href="pages/UnesiVest.html">Unesi vest</a></li>
+					<li><a href="pages/Azuriranje.html">A�uriraj vest</a></li>
 					<li><a href="pages/IzborNaslovne.html">Izbor naslovne</a></li>
 				</ul>
 			</li>
