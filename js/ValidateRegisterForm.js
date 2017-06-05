@@ -5,9 +5,9 @@ function validateform(){
 	var address = document.RegisterForm.address.value;  
 	var mobile = document.RegisterForm.mobile.value;  
 
-	var reg1 = new RegExp("(\\d{3})-(\\d{3})-(\\d{4})");
-	var reg2 = new RegExp("(\\d{3})-(\\d{4})-(\\d{3})");
-	var reg3 = new RegExp("(\\d{3})-(\\d{7})");
+	var reg1 = new RegExp("\d{3}-\d{3}-\d{4}");
+	var reg2 = new RegExp("\d{3}-\d{4}-\d{3}");
+	var reg3 = new RegExp("\d{3}-\d{7}");
 	  
 	if (email==null || email==""){  
 	  alert("Email can't be blank");  
