@@ -34,7 +34,7 @@ if (isset($_POST["registrujSe"])){
 		die("Error creating user: " . $conn->error);
 	}
 	
-	header("Location: http://localhost/pages/UlogujSe.html");	
+	header("Location: http://localhost/projekatIP/pages/UlogujSe.html");	
 		
 	$conn->close();
 		

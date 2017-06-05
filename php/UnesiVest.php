@@ -3,8 +3,6 @@
 $nameErr = $emailErr = $genderErr = $websiteErr = "";
 $linktoFIle=$name = $podkategorija = $kategorija = $tekstVesti = $naslovVesti = "";
 
-echo "\n Skripta pocela\n";
-
   //TODO:dohvati sesiju,id korsnika
 
   if (isset($_POST["uploadSlike"])) {
@@ -52,8 +50,6 @@ echo "\n Skripta pocela\n";
   } else {
     $kategorija = test_input($_POST["kategorija"]);
     
-    echo $kategorija;
-    echo "\n";
   }  
   if (empty($_POST["podkategorija"])) {
     $podkategorija = "";
@@ -62,8 +58,6 @@ echo "\n Skripta pocela\n";
   } else {
     $podkategorija = test_input($_POST["podkategorija"]);
     
-    echo $podkategorija;
-    echo "\n";
   }
   
   if (empty($_POST["tekstVesti"])) {
@@ -73,8 +67,6 @@ echo "\n Skripta pocela\n";
   } else {
     $tekstVesti = test_input($_POST["tekstVesti"]);
     
-    echo $tekstVesti;
-    echo "\n";
   }
    if (empty($_POST["naslovVesti"])) {
     $naslovVesti = "";
@@ -82,23 +74,15 @@ echo "\n Skripta pocela\n";
 
   } else {
     $naslovVesti = test_input($_POST["naslovVesti"]);
-    
-    echo $naslovVesti;
-    echo "\n";
   }
   $servername = "localhost";
 	$username = "G23";
 	$password = "123";
 	$defaultDatabase = "portalvesti";
 	
-
-  //za fajl : iskopirati fajl u locahost/projekatIP/images;
-  //zapamtiti link u bazi,i onda njega kao echo link;
-	// Create connection
 	$conn = new mysqli($servername, $username, $password, $defaultDatabase);
 	
 	if ($conn->connect_error) {
-	echo "123";
 		die("Connection failed: " . $conn->connect_error);		
 	}
 
@@ -124,6 +108,6 @@ function test_input($data) {
   return $data;
 }
 
-echo "\n Skripta se zavrsila \n";
+
 
 ?>

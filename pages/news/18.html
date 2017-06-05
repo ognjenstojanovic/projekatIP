@@ -1,0 +1,54 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">05.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Kultura Film Vest
+	    </h1>
+
+	    <img src="../images/domaca/antic.jpg">
+
+	    <br />
+		
+		<p>
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+		</p>
+	    
+	    <?php 
+	    	include '../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php'
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

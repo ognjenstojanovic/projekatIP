@@ -12,7 +12,7 @@
 
 	    <h1 style="margin-top: 50px">Unesi vest</h1>
 
-	    <form id="insertingNews" name="InsertNewsForm" method="post" action="../php/UnesiVest.php" enctype="multipart/form-data">
+	    <form id="insertingNews" name="InsertNewsForm" method="post" action="../Naslovna.html" enctype="multipart/form-data">
 	    	<p class="registerFormP">
 				<label>
 					Kategorija
@@ -49,23 +49,24 @@
 			<p class="registerFormP">
 				<label>
 					Upload-uj sliku
-					<input type="file" name="uploadSlike" id="uploadSlike" class="categorySelect">				</label>
+					<input type="file" name="uploadSlike" id="uploadSlike" class="categorySelect">
+				</label>
 			</p>
 		
-		<div class="comments">
-			<p style="text-align: left;">Naslov vesti</p>
-            <input type="text" name="naslovVesti" placeholder="Naslov vesti" style="width: 100%; height: 25px">
-	    	<p style="text-align: left;">Tekst vesti</p>
-	    	<textarea name="tekstVesti"  style="width: 100%; height: 200px"></textarea>
-	    </div>
+			<div class="comments">
+				<p style="text-align: left;">Naslov vesti</p>
+				<input type="text" name="naslovVesti" placeholder="Naslov vesti" style="width: 100%; height: 25px">
+				<p style="text-align: left;">Tekst vesti</p>
+				<textarea name="tekstVesti"  style="width: 100%; height: 200px"></textarea>
+			</div>
 
 	
-		<div style="margin-top: 30px">
-			<input type="submit" name="unesiVest" value="Unesi" style="height: 25px; width: 100px; margin-left: 35px;">
-	
-			<input type="submit" name="otkazi" value="Otkazi" style="height: 25px; width: 100px; margin-left: 35px;">
-		</div>
-</form>
+			<div style="margin-top: 30px">
+				<input type="submit" name="unesiVest" value="Unesi" style="height: 25px; width: 100px; margin-left: 35px;">
+		
+				<input type="submit" name="otkazi" value="Otkazi" style="height: 25px; width: 100px; margin-left: 35px;">
+			</div>
+		</form>
 	</div>
 	
 	<script src="../js/ValidateUnesiVestForm.js"></script>
