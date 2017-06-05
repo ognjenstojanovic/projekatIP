@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 04, 2017 at 10:43 PM
+-- Generation Time: Jun 05, 2017 at 09:55 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -88,7 +88,7 @@ CREATE TABLE `vesti` (
   `Kategorija` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   `Podkategorija` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   `Created` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `LastUpdated` timestamp NOT NULL ON UPDATE CURRENT_TIMESTAMP
+  `LastUpdated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -96,20 +96,25 @@ CREATE TABLE `vesti` (
 --
 
 INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `BrojLajkova`, `BrojHejtova`, `Kategorija`, `Podkategorija`, `Created`, `LastUpdated`) VALUES
-(1, 1, 'Vlado ovo je test vest', 'pages/News/1.php', 32, 41, 'Politika', 'Ekonomija', '2017-06-01 16:50:41', '2017-06-01 17:10:09'),
-(2, 1, 'Ekonomija Privreda', 'pages/news/2.php', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 22:33:22'),
-(3, 1, 'Ekonomija Privreda', 'pages/News/3.php', NULL, NULL, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 21:51:29'),
-(4, 1, 'Ekonomija Biznis', 'pages/News/4.php', NULL, NULL, 'Ekonomija ', 'Biznis', '2017-06-03 22:00:00', '2017-06-04 21:51:37'),
-(5, 1, 'Politika Domaća', 'pages/news/5.php', NULL, NULL, 'Politika', 'Domaća', '2017-06-03 22:00:00', '2017-06-03 22:00:00'),
-(6, 1, 'Politika Regionalna', 'pages/news/6.php', NULL, NULL, 'Politika', 'Regionalna', '2017-06-03 22:00:00', '2017-06-04 21:54:05'),
-(7, 1, 'Politika Svet', 'pages/news/7.php\r\n', NULL, NULL, 'Politika ', 'Svet', '2017-06-04 22:00:00', '2017-06-04 22:35:12'),
-(8, 1, 'Sport Fudbal', 'pages/news/8.php\r\n', NULL, NULL, 'Sport ', 'Fudbal', '2017-06-04 22:00:00', '2017-06-04 22:35:24'),
-(9, 1, 'Sport Košarka', 'pages/news/9.php\r\n', 0, 0, 'Sport', 'Košarka', '2017-06-04 22:00:00', '2017-06-04 22:35:28'),
-(10, 1, 'Sport Atletika', 'pages/news/10.php\r\n', 0, 0, 'Sport', 'Atletika', '2017-06-04 22:00:00', '2017-06-04 22:36:11'),
-(11, 1, 'Kultura Film', 'pages/news/11.php\r\n', 0, 0, 'Kultura', 'Film', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
-(12, 1, 'Kultura Pozorište', 'pages/news/12.php\r\n', 0, 0, 'Kultura', 'Pozorište', '2017-06-04 22:00:00', '2017-06-04 22:38:21'),
-(13, 1, 'Pozorište Slikarstvo', 'pages/news/13.php\r\n', 0, 0, 'Pozorište ', 'Slikarstvo', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
-(14, 1, 'Pozorište Muzika', 'pages/news/14.php\r\n', 0, 0, 'Pozorište ', 'Muzika ', '2017-06-04 22:00:00', '2017-06-04 22:00:00');
+(1, 1, 'Vlado ovo je test vest', 'pages/News/1.html', 32, 41, 'Politika', 'Ekonomija', '2017-06-01 16:50:41', '2017-06-01 17:10:09'),
+(2, 1, 'Ekonomija Privreda', 'pages/news/2.html', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 22:33:22'),
+(3, 1, 'Ekonomija Privreda', 'pages/News/3.html', NULL, NULL, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 21:51:29'),
+(4, 1, 'Ekonomija Biznis', 'pages/News/4.html', NULL, NULL, 'Ekonomija ', 'Biznis', '2017-06-03 22:00:00', '2017-06-04 21:51:37'),
+(5, 1, 'Politika Domaća', 'pages/news/5.html', NULL, NULL, 'Politika', 'Domaća', '2017-06-03 22:00:00', '2017-06-03 22:00:00'),
+(6, 1, 'Politika Regionalna', 'pages/news/6.html', NULL, NULL, 'Politika', 'Regionalna', '2017-06-03 22:00:00', '2017-06-04 21:54:05'),
+(7, 1, 'Politika Svet', 'pages/news/7.html\r\n', NULL, NULL, 'Politika ', 'Svet', '2017-06-04 22:00:00', '2017-06-04 22:35:12'),
+(8, 1, 'Sport Fudbal', 'pages/news/8.html\r\n', NULL, NULL, 'Sport ', 'Fudbal', '2017-06-04 22:00:00', '2017-06-04 22:35:24'),
+(9, 1, 'Sport Košarka', 'pages/news/9.html\r\n', 0, 0, 'Sport', 'Košarka', '2017-06-04 22:00:00', '2017-06-04 22:35:28'),
+(10, 1, 'Sport Atletika', 'pages/news/10.html\r\n', 0, 0, 'Sport', 'Atletika', '2017-06-04 22:00:00', '2017-06-04 22:36:11'),
+(11, 1, 'Kultura Film', 'pages/news/11.html\r\n', 0, 0, 'Kultura', 'Film', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(12, 1, 'Kultura Pozorište', 'pages/news/12.html\r\n', 0, 0, 'Kultura', 'Pozorište', '2017-06-04 22:00:00', '2017-06-04 22:38:21'),
+(13, 1, 'Pozorište Slikarstvo', 'pages/news/13.html\r\n', 0, 0, 'Pozorište ', 'Slikarstvo', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(14, 1, 'Pozorište Muzika', 'pages/news/14.html\r\n', 0, 0, 'Pozorište ', 'Muzika ', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(15, 0, 'Politika Domaca vest', 'pages/1.html', 0, 0, 'Politika', 'DomaÄ‡a', '2017-06-05 21:12:17', '2017-06-05 21:12:17'),
+(16, 0, 'Politika Domaca vest', '', 0, 0, 'Politika', 'DomaÄ‡a', '2017-06-05 21:20:47', '2017-06-05 21:20:47'),
+(17, 0, 'Sport Fudbal vest', 'pages/news/17.html', 0, 0, 'Sport', 'Fudbal', '2017-06-05 21:26:52', '2017-06-05 21:26:52'),
+(18, 0, 'Kultura Film Vest', 'pages/news/18.html', 0, 0, 'Kultura', 'Film', '2017-06-05 21:29:04', '2017-06-05 21:29:04'),
+(19, 0, 'Kultura Film Vest 1', 'pages/news/19.html', 0, 0, 'Kultura', 'Film', '2017-06-05 21:36:46', '2017-06-05 21:36:46');
 
 --
 -- Indexes for dumped tables
@@ -151,7 +156,7 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `vesti`
 --
 ALTER TABLE `vesti`
-  MODIFY `IDVesti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `IDVesti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
