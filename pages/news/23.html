@@ -1,0 +1,54 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">10.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Olivera
+	    </h1>
+
+	    <img src="../../images/GenericImage.jpg">
+
+	    <br />
+		
+		<p>
+			Оливера Јевтић, најбоља српска атлетичарка - тркачица на дуге стазе. Рођена је 24. јула 1977. у Титовом Ужицу, где и сада живи. Од почетка каријере је у ужичком Атлетском клубу „Младост“. Њен тренер је Славко Кузмановић, који и сам има запажене резултате у атлетици. Више пута је проглашавана за најбољу атлетичарку Југославије, Србије и Црне Горе, Србије. Дневни лист Спорт је 1996. прогласио Оливеру за младог спортисту године, а 2006. јој је додељена награда „Златна значка“, награда за најбољег спортисту у Србији. Исте године, као и 1998. и 1999. је проглашена за најбољу спортисткињу од стране Олимпијског комитета Србије, односно Југославије.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

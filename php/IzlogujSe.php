@@ -2,7 +2,7 @@
 
 session_start();
 session_unset();
-header("Location: http://localhost/projekatIP/Naslovna.html");
+header("Location: ../Naslovna.html");
 exit();
 
 ?>

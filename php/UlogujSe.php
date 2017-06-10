@@ -36,13 +36,13 @@ if (isset($_POST["ulogujSe"])){
 		$_SESSION["adresa"] = $row["adresa"];
 		$_SESSION["komentar"] = $row["komentar"];
 		
-		header("Location: http://localhost/projekatIP/pages/TacniPodaci.html");	
+		header("Location:../pages/TacniPodaci.html");	
 		
 		$conn->close();
 		
 		exit();
 	}else{
-		header("Location: http://localhost/projekatIP/pages/PogresniPodaci.html");
+		header("Location: ../pages/PogresniPodaci.html");
 		
 		$conn->close();
 		
