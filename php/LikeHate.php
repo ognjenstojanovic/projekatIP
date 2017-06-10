@@ -30,15 +30,25 @@ while($row = $result->fetch_assoc()){
 }
 
 
-echo '<form id="likehate" method="post" action="../../php/LikeDislike.php"><div class="likes"> Lajkova: ';
+echo '<form id="likehate" onsubmit="return likeFunction()" method="post" action="../../php/LikeDislike.php">
+      <div class="likes"> 
+        Lajkova: ';
 
 echo $brojLajkova;
 
-echo ' <button class="likeButton" style="vertical-align: middle;" type="submit" name="lajkuj">Lajkuj</button> Hejtova: ';
+echo ' <button class="likeButton" style="vertical-align: middle;" type="submit" name="lajkuj">Lajkuj</button>
+       </div>
+       </form> ';
+
+echo '<form id="likehate" onsubmit="return hateFunction()" method="post" action="../../php/LikeDislike.php">
+      <div class="likes"> 
+        Hejtova: ';
 		
 echo $brojHejtova;
 
-echo ' <button class="hateButton" style="vertical-align: middle;" type="submit" name="hejtuj">Hejtuj</button></div></form>';
+echo ' <button class="hateButton" style="vertical-align: middle;" type="submit" name="hejtuj">Hejtuj</button>
+       </div>
+       </form>';
 
 
 

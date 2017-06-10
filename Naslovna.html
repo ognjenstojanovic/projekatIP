@@ -36,26 +36,6 @@ if (isset($_POST["unesiVest"])){
 	
 	$filename = $id . ".html";
 	$link = "pages/news/" . $filename;
-
-	$sqlQuery = "INSERT INTO vesti (Naslov, 
-									Kategorija, 
-									Podkategorija,
-									BrojLajkova,
-									BrojHejtova,
-									Link,
-									IDKorisnika)
-							 Values('$NaslovVesti',
-									'$kategorija',
-									'$podkategorija',
-									0,
-									0,
-									'$link',
-									0)";
-
-	if ($conn->query($sqlQuery) === TRUE) {		
-	} else {
-		echo "<h1>Error inserting news: " . $conn->error . "</h1>";
-	}
 	
 	$newFile = fopen($link, "w");
 	
@@ -91,7 +71,28 @@ if (isset($_POST["unesiVest"])){
 	fwrite($newFile, $contents);
 	
 	fclose($newFile);
-		
+	
+	$sqlQuery = "INSERT INTO vesti (Naslov, 
+									Kategorija, 
+									Podkategorija,
+									BrojLajkova,
+									BrojHejtova,
+									Link,
+									SlikaLink,
+									IDKorisnika)
+							 Values('$NaslovVesti',
+									'$kategorija',
+									'$podkategorija',
+									0,
+									0,
+									'$link',
+									'$linkToImage',
+									0)";
+
+	if ($conn->query($sqlQuery) === TRUE) {		
+	} else {
+		echo "<h1>Error inserting news: " . $conn->error . "</h1>";
+	}
 	
 	if ($conn->connect_error) {
 		die("Connection failed: " . $conn->connect_error);		
@@ -182,15 +183,12 @@ echo '<h3>' . $conn1->error . '</h3>';
 						<a href="pages/news/KategorijaEkonomija.html">Ekonomija</a>
 					</h4>
 				</p>
-				
-				<img src="images/economy/evro_sutra_12380.jpg" class="blockImage" />
-				
-				<div id="newsBlockParagraph">
-					<?php
-						include 'php/NewsListFunction.php';
-						ListNews("Ekonomija");
-					?>
-				</div>
+					
+				<?php
+					include 'php/NewsListFunction.php';
+					
+					ListNews("Ekonomija");
+				?>
  
 			</td>
 			<td class="bottomTableTd">
@@ -198,13 +196,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaPrivreda.html">Privreda</a>
 				</h4>
 				
-				<img src="images/privreda/nbs.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Privreda");
-					?>
-				</div>
+				<?php
+					ListNews("Privreda");
+				?>
+				
 				
 			</td>
 			<td class="bottomTableTd">
@@ -212,13 +208,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaFinansije.html">Finansije</a>
 				</h4>
 				
-				<img src="images/finansije/pesnice.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Finansije");
-					?>
-				</div>
+				<?php
+					ListNews("Finansije");
+				?>
+				
 				
 			</td>
 		</tr>
@@ -228,13 +222,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaPolitika.html">Politika</a>
 				</h4>
 				
-				<img src="images/politika/krah.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Politika");
-					?>
-				</div>
+				<?php
+					ListNews("Politika");
+				?>
+				
 				
 			</td>
 			<td class="bottomTableTd">
@@ -242,13 +234,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaKultura.html">Kultura</a>
 				</h4>
 				
-				<img src="images/kultura/jedna.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Kultura");
-					?>
-				</div>
+				<?php
+					ListNews("Kultura");
+				?>
+			
 				
 			</td>
 			<td class="bottomTableTd">
@@ -256,13 +246,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaTehnologija.html">Tehnologije</a>
 				</h4>
 				
-				<img src="images/tehnologija/mark.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Tehnologije");
-					?>
-				</div>
+				<?php
+					ListNews("Tehnologije");
+				?>
+				
 				
 			</td>
 		</tr>
@@ -272,13 +260,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaSport.html">Sport</a>
 				</h4>
 				
-				<img src="images/sport/najbrzi.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Sport");
-					?>
-				</div>
+				<?php
+					ListNews("Sport");
+				?>
+				
 				
 			</td>
 			<td class="bottomTableTd">
@@ -286,13 +272,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaFudbal.html">Fudbal</a>
 				</h4>
 				
-				<img src="images/economy/muslin.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Fudbal");
-					?>
-				</div>
+				<?php
+					ListNews("Fudbal");
+				?>
+				
 				
 			</td>
 			<td class="bottomTableTd">
@@ -300,13 +284,11 @@ echo '<h3>' . $conn1->error . '</h3>';
 					<a href="pages/news/KategorijaKosarka.html">Košarka</a>
 				</h4>
 				
-				<img src="images/economy/efesucetvrtfinalu.jpg" class="blockImage" />
 				
-				<div id="newsBlockParagraph">
-					<?php
-						ListNews("Kosarka");
-					?>
-				</div>
+				<?php
+					ListNews("Kosarka");
+				?>
+				
 				
 			</td>
 		</tr>

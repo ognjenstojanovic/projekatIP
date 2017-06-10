@@ -1,6 +1,6 @@
 <?php
 
-echo '<form id="insertingComment" method="post" action="../php/InsertComment.php">
+echo '<form id="insertingComment" method="post" action="../../php/InsertComment.php">
 	    <div class="comments">
 	    	<p style="text-align: left;">Napisi komentar</p>
             <input type="text" name="naslovKomentara" placeholder="Naslov komentara" style="margin-bottom:15px; width: 100%; height: 25px">

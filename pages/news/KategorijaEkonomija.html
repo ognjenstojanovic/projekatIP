@@ -12,7 +12,7 @@
  		Ekonomija
  	</h1>	
 	
-	<table>
+	<table style="margin: 0 auto">
 		<?php
 
 		$servername = "localhost";
@@ -33,7 +33,19 @@
 
 		while($row = $result->fetch_assoc())
 		{
-			echo 'Vest';
+			echo '<tr><td>';
+
+			$link = "../" . $row["Link"];
+
+			echo '<a href=' . addslashes($link) . '>';
+			
+			echo $row["Naslov"];
+
+			echo '</a><br>';
+
+			echo '<a href=' . addslashes($link) . '><img style="height: 300px; width: 300px; margin-bottom: 10px" src="../../'. $row["SlikaLink"] .'"></a>';
+
+			echo '</td></tr>';
 		}
 
 		$conn1->close();

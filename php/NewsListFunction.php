@@ -17,6 +17,12 @@ function ListNews($category){
 
     $result = $conn1->query($query);
 
+    $row = $result->fetch_assoc();
+
+    echo '<img src="' . $row["SlikaLink"] . '" class="blockImage" />';
+				
+	echo '<div id="newsBlockParagraph">';
+
     echo '<ul>';
 
     while($row = $result->fetch_assoc()){
@@ -24,6 +30,9 @@ function ListNews($category){
     }
 
     echo '</ul>';
+
+    echo '</div>';
+
 
 }
 
