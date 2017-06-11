@@ -12,7 +12,7 @@ if ($conn1->connect_error) {
 	die("Connection failed: " . $conn->connect_error);		
 }
 
-$link = $_SERVER['DOCUMENT_ROOT'] . "/IP/pages/" . $_POST["Link"];
+$link = $_POST["Link"];
 
 $substring = substr($link, strrpos($link, "/") + 1);
 
