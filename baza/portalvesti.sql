@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 05, 2017 at 09:55 PM
+-- Generation Time: Jun 11, 2017 at 10:31 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -83,6 +83,7 @@ CREATE TABLE `vesti` (
   `IDKorisnika` int(11) NOT NULL,
   `Naslov` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
   `Link` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `SlikaLink` varchar(50) DEFAULT NULL,
   `BrojLajkova` int(11) DEFAULT NULL,
   `BrojHejtova` int(11) DEFAULT NULL,
   `Kategorija` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
@@ -95,26 +96,46 @@ CREATE TABLE `vesti` (
 -- Dumping data for table `vesti`
 --
 
-INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `BrojLajkova`, `BrojHejtova`, `Kategorija`, `Podkategorija`, `Created`, `LastUpdated`) VALUES
-(1, 1, 'Vlado ovo je test vest', 'pages/News/1.html', 32, 41, 'Politika', 'Ekonomija', '2017-06-01 16:50:41', '2017-06-01 17:10:09'),
-(2, 1, 'Ekonomija Privreda', 'pages/news/2.html', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 22:33:22'),
-(3, 1, 'Ekonomija Privreda', 'pages/News/3.html', NULL, NULL, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 21:51:29'),
-(4, 1, 'Ekonomija Biznis', 'pages/News/4.html', NULL, NULL, 'Ekonomija ', 'Biznis', '2017-06-03 22:00:00', '2017-06-04 21:51:37'),
-(5, 1, 'Politika Domaća', 'pages/news/5.html', NULL, NULL, 'Politika', 'Domaća', '2017-06-03 22:00:00', '2017-06-03 22:00:00'),
-(6, 1, 'Politika Regionalna', 'pages/news/6.html', NULL, NULL, 'Politika', 'Regionalna', '2017-06-03 22:00:00', '2017-06-04 21:54:05'),
-(7, 1, 'Politika Svet', 'pages/news/7.html\r\n', NULL, NULL, 'Politika ', 'Svet', '2017-06-04 22:00:00', '2017-06-04 22:35:12'),
-(8, 1, 'Sport Fudbal', 'pages/news/8.html\r\n', NULL, NULL, 'Sport ', 'Fudbal', '2017-06-04 22:00:00', '2017-06-04 22:35:24'),
-(9, 1, 'Sport Košarka', 'pages/news/9.html\r\n', 0, 0, 'Sport', 'Košarka', '2017-06-04 22:00:00', '2017-06-04 22:35:28'),
-(10, 1, 'Sport Atletika', 'pages/news/10.html\r\n', 0, 0, 'Sport', 'Atletika', '2017-06-04 22:00:00', '2017-06-04 22:36:11'),
-(11, 1, 'Kultura Film', 'pages/news/11.html\r\n', 0, 0, 'Kultura', 'Film', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
-(12, 1, 'Kultura Pozorište', 'pages/news/12.html\r\n', 0, 0, 'Kultura', 'Pozorište', '2017-06-04 22:00:00', '2017-06-04 22:38:21'),
-(13, 1, 'Pozorište Slikarstvo', 'pages/news/13.html\r\n', 0, 0, 'Pozorište ', 'Slikarstvo', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
-(14, 1, 'Pozorište Muzika', 'pages/news/14.html\r\n', 0, 0, 'Pozorište ', 'Muzika ', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
-(15, 0, 'Politika Domaca vest', 'pages/1.html', 0, 0, 'Politika', 'DomaÄ‡a', '2017-06-05 21:12:17', '2017-06-05 21:12:17'),
-(16, 0, 'Politika Domaca vest', '', 0, 0, 'Politika', 'DomaÄ‡a', '2017-06-05 21:20:47', '2017-06-05 21:20:47'),
-(17, 0, 'Sport Fudbal vest', 'pages/news/17.html', 0, 0, 'Sport', 'Fudbal', '2017-06-05 21:26:52', '2017-06-05 21:26:52'),
-(18, 0, 'Kultura Film Vest', 'pages/news/18.html', 0, 0, 'Kultura', 'Film', '2017-06-05 21:29:04', '2017-06-05 21:29:04'),
-(19, 0, 'Kultura Film Vest 1', 'pages/news/19.html', 0, 0, 'Kultura', 'Film', '2017-06-05 21:36:46', '2017-06-05 21:36:46');
+INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `SlikaLink`, `BrojLajkova`, `BrojHejtova`, `Kategorija`, `Podkategorija`, `Created`, `LastUpdated`) VALUES
+(1, 1, 'Vlado ovo je test vest', 'pages/News/1.html', 'images/GenericImage.jpg', 32, 41, 'Politika', 'Ekonomija', '2017-06-01 16:50:41', '2017-06-01 17:10:09'),
+(2, 1, 'Ekonomija Privreda', 'pages/news/2.html', 'images/popis.jpg', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 22:33:22'),
+(3, 1, 'Ekonomija Privreda', 'pages/News/3.html', 'images/privreda.jpg', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-11 18:21:15'),
+(4, 1, 'Ekonomija Biznis', 'pages/News/4.html', 'images/alcatel.jpg', 0, 0, 'Ekonomija ', 'Biznis', '2017-06-03 22:00:00', '2017-06-11 18:21:25'),
+(5, 1, 'Politika Domaća', 'pages/news/5.html', 'images/pozoriste.jpg', 0, 0, 'Politika', 'Domaća', '2017-06-03 22:00:00', '2017-06-11 18:21:38'),
+(6, 1, 'Politika Regionalna', 'pages/news/6.html', 'images/regionalna.jpg', 0, 0, 'Politika', 'Regionalna', '2017-06-03 22:00:00', '2017-06-11 18:21:43'),
+(7, 1, 'Politika Svet', 'pages/news/7.html', 'images/politikasvet.jpg', 0, 0, 'Politika ', 'Svet', '2017-06-04 22:00:00', '2017-06-11 18:21:49'),
+(8, 1, 'Sport Fudbal', 'pages/news/8.html', 'images/iskorak.jpg', 0, 0, 'Sport ', 'Fudbal', '2017-06-04 22:00:00', '2017-06-11 18:21:54'),
+(9, 1, 'Sport Košarka', 'pages/news/9.html', 'images/biser.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-04 22:00:00', '2017-06-10 13:50:56'),
+(10, 1, 'Sport Atletika', 'pages/news/10.html', 'images/atletski.jpg', 0, 0, 'Sport', 'Atletika', '2017-06-04 22:00:00', '2017-06-04 22:36:11'),
+(11, 1, 'Kultura Film', 'pages/news/11.html', 'images/aida.jpg', 0, 0, 'Kultura', 'Film', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(12, 1, 'Kultura Pozorište', 'pages/news/12.html', 'images/pozoriste.jpg', 0, 0, 'Kultura', 'Pozorište', '2017-06-04 22:00:00', '2017-06-04 22:38:21'),
+(13, 1, 'Pozorište Slikarstvo', 'pages/news/13.html', 'images/pozsli.jpg', 0, 0, 'Pozorište ', 'Slikarstvo', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(14, 1, 'Pozorište Muzika', 'pages/news/14.html', 'images/pozmuz.jpg', 0, 0, 'Pozorište ', 'Muzika ', '2017-06-04 22:00:00', '2017-06-04 22:00:00'),
+(15, 1, 'Politika Domaca vest', 'pages/1.html', 'images/poldom.jpg', 0, 0, 'Politika', 'Domaca', '2017-06-05 21:12:17', '2017-06-10 13:51:04'),
+(16, 1, 'Politika Domaca vest', 'pages/16.html', 'images/poldom2.jpg', 0, 0, 'Politika', 'Domaca', '2017-06-05 21:20:47', '2017-06-10 13:51:15'),
+(17, 1, 'Sport Fudbal vest', 'pages/news/17.html', 'images/iskorak.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-05 21:26:52', '2017-06-05 21:26:52'),
+(18, 1, 'Kultura Film Vest', 'pages/news/18.html', 'images/aida.jpg', 0, 0, 'Kultura', 'Film', '2017-06-05 21:29:04', '2017-06-05 21:29:04'),
+(19, 1, 'Kultura Film Vest 1', 'pages/news/19.html', 'images/tarantino.jpg', 0, 0, 'Kultura', 'Film', '2017-06-05 21:36:46', '2017-06-05 21:36:46'),
+(20, 1, 'Test Vest 123', 'pages/news/20.html', 'images/GenericImage.jpg', 0, 0, 'Politika', 'Domaca', '2017-06-10 13:36:16', '2017-06-10 13:51:26'),
+(21, 1, 'FMP dobio partizan OPET', 'pages/news/21.html', 'images/crveno.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-10 13:45:27', '2017-06-10 13:50:39'),
+(22, 1, 'Pozoriste', 'pages/news/22.html', 'images/pozoriste.jpg', 0, 0, 'Kultura', 'Pozoriste', '2017-06-10 13:58:58', '2017-06-10 13:58:58'),
+(23, 1, 'Olivera', 'pages/news/23.html', 'images/sp-olivera.jpg', 1, 0, 'Sport', 'Atletika', '2017-06-10 14:02:23', '2017-06-10 14:02:40'),
+(24, 1, 'Ivica', 'pages/news/24.html', 'images/ivica3.jpg', 0, 0, 'Politika', 'Regionalna', '2017-06-10 14:07:14', '2017-06-10 14:07:14'),
+(25, 1, 'Stojke', 'pages/news/25.html', 'images/mustafa.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-10 14:10:40', '2017-06-10 14:10:40'),
+(26, 1, 'Kombajn', 'pages/news/26.html', 'images/privreda.jpg', 0, 0, 'Ekonomija', 'Privreda', '2017-06-10 14:13:22', '2017-06-10 14:13:22'),
+(27, 1, 'Duda', 'pages/news/27.html', 'images/dusan-duda-ivkovic.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-10 14:16:59', '2017-06-10 14:16:59'),
+(29, 0, 'PORESKI SAVETNICI Ne kaÅ¾njavajte one koji ne plate porez na vreme, ako se SAMI PRIJAVE', 'pages/news/29.html', 'images/savetnici.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:19:59', '2017-06-11 18:19:59'),
+(30, 0, 'Izvestaj Ministarstva finansija otkrio sta to NAJVISE PUNI BUDZET Srbije ', 'pages/news/30.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:22:56', '2017-06-11 18:25:23'),
+(31, 0, 'Ekonimija FInansije test', 'pages/news/31.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:24:02', '2017-06-11 18:24:02'),
+(32, 0, 'Neocekivan rasplet', 'pages/news/32.html', 'images/neocekivan.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:26:49', '2017-06-11 18:26:49'),
+(33, 0, 'U San Francisku je otvorio crkvu za hakere', 'pages/news/33.html', 'images/sanfrancisko.jpg', 0, 0, 'Tehnologije', 'Softver', '2017-06-11 19:31:24', '2017-06-11 19:31:24'),
+(34, 0, '"GUGL" KONFERENCIJA Predstavljene brojne novine, "Gugl asistent" od sada i na ajfonu ', 'pages/news/34.html', 'images/gugl.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:33:25', '2017-06-11 19:34:20'),
+(35, 0, 'OTKRIVAMO Dogovor Beograda i PriÅ¡tine o telekomunikacijama', 'pages/news/35.html', 'images/dogovor.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:36:40', '2017-06-11 19:36:40'),
+(36, 0, 'Kinezima stelt tehnologiju za nevidljivi avion dali - SRBI ', 'pages/news/36.html', 'images/kinezi.jpg', 1, 1, 'Tehnologije', 'Komunikacije', '2017-06-11 19:38:54', '2017-06-11 19:39:01'),
+(37, 0, 'PROPAST VELIKANA', 'pages/news/37.html', 'images/partizan.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:40:48', '2017-06-11 19:41:17'),
+(38, 0, 'Trinkijerijev Bamberg poÄistio Oldenburg za Evroligu i titulu ', 'pages/news/38.html', 'images/trinki.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:42:44', '2017-06-11 19:42:44'),
+(39, 0, ' Srbija Ä‡e imati sjajnu podrÅ¡ku protiv Velsa ', 'pages/news/39.html', 'images/podrska.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-11 19:44:05', '2017-06-11 19:44:05'),
+(40, 0, ' Nulti rast makedonske privrede u prvom kvartalu ', 'pages/news/40.html', 'images/nulti.jpg', 0, 0, 'Ekonomija', 'Privreda', '2017-06-11 19:45:17', '2017-06-11 19:45:17');
 
 --
 -- Indexes for dumped tables
@@ -156,7 +177,7 @@ ALTER TABLE `korisnici`
 -- AUTO_INCREMENT for table `vesti`
 --
 ALTER TABLE `vesti`
-  MODIFY `IDVesti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `IDVesti` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
