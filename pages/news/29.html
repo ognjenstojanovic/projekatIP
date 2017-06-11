@@ -1,0 +1,60 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 PORESKI SAVETNICI Ne kažnjavajte one koji ne plate porez na vreme, ako se SAMI PRIJAVE
+	    </h1>
+
+	    <img src="../../images/savetnici.jpg">
+
+	    <br />
+		
+		<p>
+			Udruženje je takav zaključak usvojilo na svom kongresu, održanom u Arandjelovcu, na kome su predstavljena stručna tumačenja primene aktuelnih poreskih i računovodstvenih zakona u Srbiji, navodi se u saopštenju .
+
+Teme koje su privukle posebnu pažnju na Kongresu bile su primena Sporazume o izbegavanju dvostrukog oporezivanja, primena člana 12 Zakona o PDV, kao i odredbe Pravilnika o PDV koji će stupiti na snagu 1. januara 2017. godine, zatim primena izmena zakona o porezu na dohodak gradjana, te poreski aspekt zajedničkog ulaganja u gradjevinarstvu, udruživanjem domaćih investitora.
+
+"Uloga poreskih savetnika u Srbiji, kao i svuda u svetu predstavlja integraciju znanja, kako iz oblasti ekonomskih, tako i iz oblasti pravnih nauka. Zato je Kongresu poreskih savetnika u Aranđelovcu, prisustvovao i predstavnik advokata koji je uspešno obradio temu krivične odgovornosti fizičkih lica kod samoprijavljivanja dohotka", piše u saopštenju.
+
+Udruženje podseća da je njihov prošlogodišnji predlog, odnosno zaključak 2. Kongresa poreskih savetnika Srbije, da se podigne, odnosno uveća granični iznos za krivično delo, bio prihvaćen i da je promenom zakona taj iznos podignut sa 150.000 dinara na 500.000 dinara.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

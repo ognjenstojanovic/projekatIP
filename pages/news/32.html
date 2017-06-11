@@ -1,0 +1,62 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Neocekivan rasplet
+	    </h1>
+
+	    <img src="../../images/neocekivan.jpg">
+
+	    <br />
+		
+		<p>
+			Grčki ministar unutrašnjih poslova Nikos Toskas preuzeo je taj slučaj pošto je dobio informacije nemačke policije i vlasti dve zemlje sarađuju u vezi s tim, dodao je isti izvor.
+
+Policija u Berlinu je saopštila u sredu da je u Ministarstvu nađen paket koji sadrži "eksplozivnu mešavinu koja se često koristi u pirotehničkoj proizvodnji" i da je mogla izazvati "znatne" povrede.
+
+S poštanskim žigom Grčke, na paketu su ime i stvarna adresa pošiljaoca, a na omotu je logo glavne opozicione desničarske partije, desničarske Nove demokratije (ND), rekao je izvor grčke policije.
+
+Navedeni pošiljalac je političar, Adonis Georgijadis, s krajnje desničarske populističke frakcije Nove demokratije, omražen i na krajnoj levci i na krajnjoj desnici grčke scene, vlasnik knjižare koja je česta meta napada pripisanih anarhističkim pokretima.
+
+Grčka policija istražuje moguće veze te sa sličnim akcijama grčkih ekstremističkih pokreta, rekao je izvor iz policije. Vlasti takođe ispituju kako je paket koji sadrži eksploziv, mogao da bude poslat i to u inostranstvo.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

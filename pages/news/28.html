@@ -1,0 +1,61 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Fijat, Hestil i Tigar - lideri izvoza u prva četiri meseca 
+	    </h1>
+
+	    <img src="../../images/ministarstvo.jpg">
+
+	    <br />
+		
+		<p>
+			Fijat-Krajsler Automobili Srbija, železara Hestil Srbija i Tigar tajers iz Pirota na čelu su liste 15 najvećih srpskih izvoznika u prva četiri meseca 2017, pri čemu se izvoz železare, kako je danas objavilo Ministarstvo finansija, više nego udvostručio u odnosu na isti lanjski period.
+Ukupna vrednost izvoza 15 vodećih izvoznika iznosila je u periodu januar-april 1,4 milijarde evra, u čemu vodeća trojka zajedno učestvuje gotovo sa polovinom, tačnije sa 685,3 miliona evra.
+
+Fijat i dalje suvereno drži prvo mesto sa ostvarenim izvozom u posmatranom periodu od 382,2 miliona evra, prati ga železara Hestil sa 183,2 miliona evra, a na trećem mestu je Tigar tajers sa vrednošću izvoza od 119,9 miliona evra.
+
+Na četvrtoj poziciji je Naftna industrija Srbije, čiji je izvoz iznosio 87,6 miliona evra, peta je kompanija Tetra Pak sa plasmanom u inostranstvu od 73,2 miliona, a MK Grupa, sa iznosom od 63,9 miliona evra, šesti je najveći domaći eksporter, prema majskom izveštaju Ministarstva finansija "Tekuća makroekonomska kretanja".
+
+Pančevačka HIP Petrohemija je zauzela sedmo mesto sa izvozom vrednim 61,8 miliona evra, a prati je prokupački Leoni sa iznosom od 58 miliona.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

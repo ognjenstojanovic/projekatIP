@@ -1,0 +1,56 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	  Nulti rast makedonske privrede u prvom kvartalu 
+	    </h1>
+
+	    <img src="../../images/nulti.jpg">
+
+	    <br />
+		
+		<p>
+			Makedonska ekonomija je, kako prenosi tv Sitel, u tom periodu bila pod uticajem političke krize, a privrednici ukazuju na uzdržanost kompanija prema investicionim projektima, kao i prema međusobnim plaćanjima.
+
+Rast je u prva tri meseca zabeležen u sektorima: informacije i komunikacije od 5,5 odsto, prerađivačka industrija (2,3%), rudarstvo i vađenje kamena (2,1%) i poljoprivreda (1,1%).
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

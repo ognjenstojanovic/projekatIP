@@ -1,0 +1,54 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Kinezima stelt tehnologiju za nevidljivi avion dali - SRBI 
+	    </h1>
+
+	    <img src="../../images/kinezi.jpg">
+
+	    <br />
+		
+		<p>
+			Kina je danas predstavila novi borbeni avion J-20 "stelt" tehnologije na avio mitingu u Džuhaju, na jugu zemlje. Kineska nebeska perjanica razvija se dugi niz godina, a informacije o J-20 prvi put su se pojavile 2010. godine. Kina ovim avionom želi da parira Amerikancima i Rusima, a malo je poznato da je "stelt" tehnologiju dobila zahvaljujući Srbiji.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

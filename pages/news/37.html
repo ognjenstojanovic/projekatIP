@@ -1,0 +1,54 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 PROPAST VELIKANA
+	    </h1>
+
+	    <img src="../../images/partizan.jpg">
+
+	    <br />
+		
+		<p>
+			Najtrofejniji srpski košarkaški klub Partizan izostaće iz finala nacionalnog plej-ofa prvi put posle 1998. godine (zbog rata 1999. se nije igrao). Ako dodamo da već četiri godine ne igra ni finale ABA lige, da je tri bez trofeja, jasne su razmere krize. Partizan se provlačio kroz celu Superligu protiv slabijih iako je savladao Crvenu zvezdu, ali je krčag pukao protiv FMP-a.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

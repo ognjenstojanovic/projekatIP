@@ -1,0 +1,54 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 "GUGL" KONFERENCIJA Predstavljene brojne novine, "Gugl asistent" od sada i na ajfonu 
+	    </h1>
+
+	    <img src="../../images/gugl.jpg">
+
+	    <br />
+		
+		<p>
+			Bivši izvršni direktor kompanija “Adoub” i “Majkrosoft” i njegova nova kompanija “GVA Kapital”, finansirana rizičnim kapitalom, renoviraju crkvu u San Francisku, staru 104 godine, koju će pretvoriti u "Hak hram", event centar i akcelerator za osnivače startap preduzeća širom sveta. “Vreme je da stvorimo nove religije u koje zaista verujemo, tehnologiju”, piše Čerkašin u svom manifestu.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

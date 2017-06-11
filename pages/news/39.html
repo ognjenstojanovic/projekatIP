@@ -1,0 +1,58 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	  Srbija će imati sjajnu podršku protiv Velsa 
+	    </h1>
+
+	    <img src="../../images/podrska.jpg">
+
+	    <br />
+		
+		<p>
+			Oko ulice Ljutice Bogdana ima gužvi, dok je nekoliko desetina hiljada ljudi punilo tribine "Marakane". Svi navijači imaju zastavice sa našom trobojkom, dok se sa raglasa čuje "Marš na Drinu" po želji "orlova".
+
+Za utakmicu Srbije i Velsa je vladalo ogromno interesovanje, prodata je 41.000 karata, a Fudbalski savez Srbije je na dan meča doštampano 5.000 ulaznica za mesta koja nisu bila planirana za prodaju.
+
+I gosti će imati podršku, pošto je oko 2.000 navijača došlo da bodri "zmajeve".
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>

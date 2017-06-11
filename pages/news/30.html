@@ -1,0 +1,58 @@
+ <html><head><!-- meta ignored --><link rel="stylesheet" type="text/css" href="../../css/site.css"></link><meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+
+<link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon"></head><body>
+
+<div id="wrapper">
+	
+    <?php
+		include '../../php/MeniZaVesti.php';
+	?>
+
+    <div id="newsDiv">
+
+	    <p id="date">11.06.17</p>
+
+	    <h1 id="newsTitle">
+	    	 Izveštaj Ministarstva finansija otkrio šta to NAJVIŠE PUNI BUDŽET Srbije 
+	    </h1>
+
+	    <img src="../../images/struktura.jpg">
+
+	    <br />
+		
+		<p>
+			Akcize su na trećem mestu po visini svih prihoda budžeta u ovom periodu, a daleko najveći priliv u državnu kasu je od dizela i cigareta. Tako akcize samo na ova dva proizvoda zajedno čine čak 72,8 odsto prihoda ove vrste nameta. Na trećem mestu je motorni benzin sa 10,6 odsto učešća u akcizama, a zatim električna energija sa 7,7 odsto, na koju je akciza uvedena pre samo dve godine.
+
+Kada se uporede prva četiri meseca 2017. sa prvim kvartalom prošle godine, priliv u državnu kasu od svih akciza je porastao. Najveći skok je od akciza na duvanske prerađevine, koje su od 25,2 milijarde dinara prošle godine dostigle 30,9 milijardi u 2017.
+
+U izveštaju Ministarstva finansija ističe se da je najveći prirast u prva četiri meseca ove godine ostvarila naplata akciza na duvanske proizvode koje zajedno sa akcizama na derivate nafte u strukturi prihoda imaju značajno učešće.
+		</p>
+	    
+	    <?php 
+	    	include '../../php/LikeHate.php';
+	    ?>
+
+		<?php
+
+		if(isset($_SESSION["IDKorisnika"]))
+		{		 
+			include '../../php/FormaZaKomentare.php';
+		}
+
+		?>
+
+	    <div class="comments">
+	    	<p style="text-align: left;">Komentari</p>	    	
+	    </div>
+
+	    <?php 		
+			include '../../php/Komentari.php';
+		?>
+		
+	</div>
+			
+	<script src="../../js/Cookies.js"></script>	 
+	
+</div>
+
+</body></html>
