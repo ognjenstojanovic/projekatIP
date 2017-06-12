@@ -25,8 +25,6 @@
 		die("Connection failed: " . $conn->connect_error);		
 	}
 
-	session_start();
-
 	$query = "SELECT * FROM Vesti WHERE IDKorisnika = " . $_SESSION["IDKorisnika"];
 
 	$result = $conn1->query($query);

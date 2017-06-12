@@ -72,6 +72,9 @@ if (isset($_POST["unesiVest"])){
 	
 	fclose($newFile);
 	
+	session_start();
+	$idKorisnika = $_SESSION['IDKorisnika'];
+	
 	$sqlQuery = "INSERT INTO vesti (Naslov, 
 									Kategorija, 
 									Podkategorija,
@@ -87,7 +90,7 @@ if (isset($_POST["unesiVest"])){
 									0,
 									'$link',
 									'$linkToImage',
-									0)";
+									$idKorisnika)";
 
 	if ($conn->query($sqlQuery) === TRUE) {		
 	} else {
