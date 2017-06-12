@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 11, 2017 at 10:31 PM
+-- Generation Time: Jun 12, 2017 at 05:40 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -97,7 +97,7 @@ CREATE TABLE `vesti` (
 --
 
 INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `SlikaLink`, `BrojLajkova`, `BrojHejtova`, `Kategorija`, `Podkategorija`, `Created`, `LastUpdated`) VALUES
-(1, 1, 'Vlado ovo je test vest', 'pages/News/1.html', 'images/GenericImage.jpg', 32, 41, 'Politika', 'Ekonomija', '2017-06-01 16:50:41', '2017-06-01 17:10:09'),
+(1, 1, 'Regionalna politika vest', 'pages/News/1.html', 'images/GenericImage.jpg', 32, 41, 'Politika', 'Regionalna', '2017-06-01 16:50:41', '2017-06-12 17:39:57'),
 (2, 1, 'Ekonomija Privreda', 'pages/news/2.html', 'images/popis.jpg', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-04 22:33:22'),
 (3, 1, 'Ekonomija Privreda', 'pages/News/3.html', 'images/privreda.jpg', 0, 0, 'Ekonomija ', 'Privreda', '2017-06-03 22:00:00', '2017-06-11 18:21:15'),
 (4, 1, 'Ekonomija Biznis', 'pages/News/4.html', 'images/alcatel.jpg', 0, 0, 'Ekonomija ', 'Biznis', '2017-06-03 22:00:00', '2017-06-11 18:21:25'),
@@ -116,7 +116,7 @@ INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `SlikaLink`, `B
 (17, 1, 'Sport Fudbal vest', 'pages/news/17.html', 'images/iskorak.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-05 21:26:52', '2017-06-05 21:26:52'),
 (18, 1, 'Kultura Film Vest', 'pages/news/18.html', 'images/aida.jpg', 0, 0, 'Kultura', 'Film', '2017-06-05 21:29:04', '2017-06-05 21:29:04'),
 (19, 1, 'Kultura Film Vest 1', 'pages/news/19.html', 'images/tarantino.jpg', 0, 0, 'Kultura', 'Film', '2017-06-05 21:36:46', '2017-06-05 21:36:46'),
-(20, 1, 'Test Vest 123', 'pages/news/20.html', 'images/GenericImage.jpg', 0, 0, 'Politika', 'Domaca', '2017-06-10 13:36:16', '2017-06-10 13:51:26'),
+(20, 1, 'Domaca politika vest', 'pages/news/20.html', 'images/GenericImage.jpg', 0, 0, 'Politika', 'Domaca', '2017-06-10 13:36:16', '2017-06-12 17:39:34'),
 (21, 1, 'FMP dobio partizan OPET', 'pages/news/21.html', 'images/crveno.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-10 13:45:27', '2017-06-10 13:50:39'),
 (22, 1, 'Pozoriste', 'pages/news/22.html', 'images/pozoriste.jpg', 0, 0, 'Kultura', 'Pozoriste', '2017-06-10 13:58:58', '2017-06-10 13:58:58'),
 (23, 1, 'Olivera', 'pages/news/23.html', 'images/sp-olivera.jpg', 1, 0, 'Sport', 'Atletika', '2017-06-10 14:02:23', '2017-06-10 14:02:40'),
@@ -124,18 +124,18 @@ INSERT INTO `vesti` (`IDVesti`, `IDKorisnika`, `Naslov`, `Link`, `SlikaLink`, `B
 (25, 1, 'Stojke', 'pages/news/25.html', 'images/mustafa.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-10 14:10:40', '2017-06-10 14:10:40'),
 (26, 1, 'Kombajn', 'pages/news/26.html', 'images/privreda.jpg', 0, 0, 'Ekonomija', 'Privreda', '2017-06-10 14:13:22', '2017-06-10 14:13:22'),
 (27, 1, 'Duda', 'pages/news/27.html', 'images/dusan-duda-ivkovic.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-10 14:16:59', '2017-06-10 14:16:59'),
-(29, 0, 'PORESKI SAVETNICI Ne kaÅ¾njavajte one koji ne plate porez na vreme, ako se SAMI PRIJAVE', 'pages/news/29.html', 'images/savetnici.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:19:59', '2017-06-11 18:19:59'),
-(30, 0, 'Izvestaj Ministarstva finansija otkrio sta to NAJVISE PUNI BUDZET Srbije ', 'pages/news/30.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:22:56', '2017-06-11 18:25:23'),
-(31, 0, 'Ekonimija FInansije test', 'pages/news/31.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:24:02', '2017-06-11 18:24:02'),
-(32, 0, 'Neocekivan rasplet', 'pages/news/32.html', 'images/neocekivan.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:26:49', '2017-06-11 18:26:49'),
-(33, 0, 'U San Francisku je otvorio crkvu za hakere', 'pages/news/33.html', 'images/sanfrancisko.jpg', 0, 0, 'Tehnologije', 'Softver', '2017-06-11 19:31:24', '2017-06-11 19:31:24'),
-(34, 0, '"GUGL" KONFERENCIJA Predstavljene brojne novine, "Gugl asistent" od sada i na ajfonu ', 'pages/news/34.html', 'images/gugl.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:33:25', '2017-06-11 19:34:20'),
-(35, 0, 'OTKRIVAMO Dogovor Beograda i PriÅ¡tine o telekomunikacijama', 'pages/news/35.html', 'images/dogovor.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:36:40', '2017-06-11 19:36:40'),
-(36, 0, 'Kinezima stelt tehnologiju za nevidljivi avion dali - SRBI ', 'pages/news/36.html', 'images/kinezi.jpg', 1, 1, 'Tehnologije', 'Komunikacije', '2017-06-11 19:38:54', '2017-06-11 19:39:01'),
-(37, 0, 'PROPAST VELIKANA', 'pages/news/37.html', 'images/partizan.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:40:48', '2017-06-11 19:41:17'),
-(38, 0, 'Trinkijerijev Bamberg poÄistio Oldenburg za Evroligu i titulu ', 'pages/news/38.html', 'images/trinki.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:42:44', '2017-06-11 19:42:44'),
-(39, 0, ' Srbija Ä‡e imati sjajnu podrÅ¡ku protiv Velsa ', 'pages/news/39.html', 'images/podrska.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-11 19:44:05', '2017-06-11 19:44:05'),
-(40, 0, ' Nulti rast makedonske privrede u prvom kvartalu ', 'pages/news/40.html', 'images/nulti.jpg', 0, 0, 'Ekonomija', 'Privreda', '2017-06-11 19:45:17', '2017-06-11 19:45:17');
+(29, 1, 'PORESKI SAVETNICI Ne kaÅ¾njavajte one koji ne plate porez na vreme, ako se SAMI PRIJAVE', 'pages/news/29.html', 'images/savetnici.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:19:59', '2017-06-12 17:38:16'),
+(30, 1, 'Izvestaj Ministarstva finansija otkrio sta to NAJVISE PUNI BUDZET Srbije ', 'pages/news/30.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:22:56', '2017-06-12 17:38:16'),
+(31, 1, 'Ekonimija FInansije test', 'pages/news/31.html', 'images/struktura.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:24:02', '2017-06-12 17:38:16'),
+(32, 1, 'Neocekivan rasplet', 'pages/news/32.html', 'images/neocekivan.jpg', 0, 0, 'Ekonomija', 'Finansije', '2017-06-11 18:26:49', '2017-06-12 17:38:16'),
+(33, 1, 'U San Francisku je otvorio crkvu za hakere', 'pages/news/33.html', 'images/sanfrancisko.jpg', 0, 0, 'Tehnologije', 'Softver', '2017-06-11 19:31:24', '2017-06-12 17:38:16'),
+(34, 1, '"GUGL" KONFERENCIJA Predstavljene brojne novine, "Gugl asistent" od sada i na ajfonu ', 'pages/news/34.html', 'images/gugl.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:33:25', '2017-06-12 17:38:16'),
+(35, 1, 'OTKRIVAMO Dogovor Beograda i PriÅ¡tine o telekomunikacijama', 'pages/news/35.html', 'images/dogovor.jpg', 0, 0, 'Tehnologije', 'Komunikacije', '2017-06-11 19:36:40', '2017-06-12 17:38:16'),
+(36, 1, 'Kinezima stelt tehnologiju za nevidljivi avion dali - SRBI ', 'pages/news/36.html', 'images/kinezi.jpg', 1, 1, 'Tehnologije', 'Komunikacije', '2017-06-11 19:38:54', '2017-06-12 17:38:16'),
+(37, 1, 'PROPAST VELIKANA', 'pages/news/37.html', 'images/partizan.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:40:48', '2017-06-12 17:38:16'),
+(38, 1, 'Trinkijerijev Bamberg poÄistio Oldenburg za Evroligu i titulu ', 'pages/news/38.html', 'images/trinki.jpg', 0, 0, 'Sport', 'Kosarka', '2017-06-11 19:42:44', '2017-06-12 17:38:16'),
+(39, 1, ' Srbija Ä‡e imati sjajnu podrÅ¡ku protiv Velsa ', 'pages/news/39.html', 'images/podrska.jpg', 0, 0, 'Sport', 'Fudbal', '2017-06-11 19:44:05', '2017-06-12 17:38:16'),
+(40, 1, ' Nulti rast makedonske privrede u prvom kvartalu ', 'pages/news/40.html', 'images/nulti.jpg', 0, 0, 'Ekonomija', 'Privreda', '2017-06-11 19:45:17', '2017-06-12 17:38:16');
 
 --
 -- Indexes for dumped tables
